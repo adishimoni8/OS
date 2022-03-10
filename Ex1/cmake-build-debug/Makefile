@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+osm.o: osm.cc.o
+
+.PHONY : osm.o
+
+# target to build an object file
+osm.cc.o:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cc.o
+.PHONY : osm.cc.o
+
+osm.i: osm.cc.i
+
+.PHONY : osm.i
+
+# target to preprocess a source file
+osm.cc.i:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cc.i
+.PHONY : osm.cc.i
+
+osm.s: osm.cc.s
+
+.PHONY : osm.s
+
+# target to generate assembly for a file
+osm.cc.s:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cc.s
+.PHONY : osm.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... osm.o"
+	@echo "... osm.i"
+	@echo "... osm.s"
 .PHONY : help
 
 

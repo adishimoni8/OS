@@ -1,6 +1,4 @@
 C:\Users\gopgo\.CLion2019.3\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1"
 -- Configuring done
-CMake Error: Cannot determine link language for target "Ex1".
-CMake Error: CMake can not determine linker language for target: Ex1
 -- Generating done
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Build files have been written to: /cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/cmake-build-debug
