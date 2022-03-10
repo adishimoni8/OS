@@ -7,7 +7,6 @@
         "a" (0xffffffff) /* no such syscall */, "b" (0), "c" (0), "d" (0) /*:\
         "eax", "ebx", "ecx", "edx"*/)
 
-
 /* Time measurement function for a simple arithmetic operation.
    returns time in nano-seconds upon success,
    and -1 upon failure.
