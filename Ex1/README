@@ -13,9 +13,31 @@ about this submission.
 
 ANSWERS:
 
-Q1:
-Here are answers to theoreical questions
-if there were such questions in the exercise.
+Assignment 1:
+WhatIDo is a given program which expects a single argument and for it to be
+a file descriptor.
+
+In case there is no supplied argument to the program,
+upon running the program, it checks whether the desired argument
+is given or not.
+It attempts to duplicate the non given input as a file descriptor and checks
+it's existence and validity.
+Once it figures that there is no given argument, it prints an error message to
+stderr, afterwards it prints "Success", closes the duplicated file descriptor
+and exits with exit code SUCCESS(0).
+
+In case there is a supplied argument, the program creates a directory
+named "Welcome" and inside of it, creates another directory named "To".
+Both directories are defined to own the same permissions:
+For user and group: read, write and execute permissions.
+For other: only read and execute.
+It then creates a new file named "OS2021" inside "To" directory with read and
+write permissions.
+Afterwards, it writes into "OS2021" the following:
+"(user name), If you haven't read the course guidelines yet ---
+do it right now!".
+Eventually, it closes the file, deletes it, deletes "To" directory and lastly,
+deletes the 'Welcome' directory and exits the program with exit code SUCCESS(0).
 
 Q2:
 Here are answers to theoreical questions
