@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/osm.cc
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/osm.cpp
 osm.h
 /cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/osm.h
 sys/time.h
 -
+iostream
+-
+osm.h
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/osm.h
 
 /cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/osm.h
 

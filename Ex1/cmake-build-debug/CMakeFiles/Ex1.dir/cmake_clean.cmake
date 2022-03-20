@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ex1.dir/main.cpp.o"
-  "CMakeFiles/Ex1.dir/osm.cc.o"
+  "CMakeFiles/Ex1.dir/osm.cpp.o"
   "Ex1.exe"
   "Ex1.pdb"
   "libEx1.dll.a"

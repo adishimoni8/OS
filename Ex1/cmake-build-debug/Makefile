@@ -123,59 +123,32 @@ Ex1/fast:
 	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/build
 .PHONY : Ex1/fast
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-osm.o: osm.cc.o
+osm.o: osm.cpp.o
 
 .PHONY : osm.o
 
 # target to build an object file
-osm.cc.o:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cc.o
-.PHONY : osm.cc.o
+osm.cpp.o:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cpp.o
+.PHONY : osm.cpp.o
 
-osm.i: osm.cc.i
+osm.i: osm.cpp.i
 
 .PHONY : osm.i
 
 # target to preprocess a source file
-osm.cc.i:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cc.i
-.PHONY : osm.cc.i
+osm.cpp.i:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cpp.i
+.PHONY : osm.cpp.i
 
-osm.s: osm.cc.s
+osm.s: osm.cpp.s
 
 .PHONY : osm.s
 
 # target to generate assembly for a file
-osm.cc.s:
-	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cc.s
-.PHONY : osm.cc.s
+osm.cpp.s:
+	$(MAKE) -f CMakeFiles/Ex1.dir/build.make CMakeFiles/Ex1.dir/osm.cpp.s
+.PHONY : osm.cpp.s
 
 # Help Target
 help:
@@ -186,9 +159,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Ex1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... osm.o"
 	@echo "... osm.i"
 	@echo "... osm.s"

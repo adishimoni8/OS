@@ -3,8 +3,8 @@ Adi Shimoni (316342435), Guy Mizrahi (314791351)
 EX: 1
 
 FILES:
-myfile.c -- a file with some code
-myfile.h -- a file with some headers
+osm.cpp -- a file with some code
+Makefile -- a makefile for assignment 2.
 
 REMARKS:
 These are some remarks that
@@ -13,7 +13,7 @@ about this submission.
 
 ANSWERS:
 
-Assignment 1:
+Q1:
 WhatIDo is a given program which expects a single argument and for it to be
 a file descriptor.
 
@@ -40,5 +40,23 @@ Eventually, it closes the file, deletes it, deletes "To" directory and lastly,
 deletes the 'Welcome' directory and exits the program with exit code SUCCESS(0).
 
 Q2:
-Here are answers to theoreical questions
-if there were such questions in the exercise.
+osm.cpp is our implementation of given header file.
+it performs 3 different tasks and measures the time taken for them to be done.
+A couple techniques were used during the measurement:
+1) Loop unrolling: a technique to minimize un-necessary actions by performing
+   same task in "chunks" and complementary reducing the iterations.
+2) re-measuring and rounding up amount of iterations, since we're performing
+   Loop unrolling, it is required to round up the amount of iterations so it
+   will divide by our unrolling factor. The calculation is performed in
+   get_num_of_iterations() function found in osm.cpp.
+The code was implemented in 3 different environments to study the effects of
+the working environment on the tasks.
+1) "Local" - Linux OS environment.
+2) "Container" - usage of Singularity and Docker for running the container.
+3) "VM" - a virtual machine ran by kvm and qemu using tiny-core-linux. it grants
+   user permissions for all operations, instead of keeping the kernel actions
+   hidden from user.
+the findings were interesting: the VM took more time than the other 2 options
+to perform the addition and function call tasks, yet it was slightly more
+optimal when it came to system call tasks. it shows how the operating system
+affects the optimization of certain tasks.
