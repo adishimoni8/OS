@@ -1,0 +1,45 @@
+adishimoni8, guy.mizrahi1
+Adi Shimoni (316342435), Guy Mizrahi (314791351)
+EX: 2
+
+FILES:
+myfile.c -- a file with some code
+myfile.h -- a file with some headers
+
+REMARKS:
+These are some remarks that
+I want the graders to know
+about this submission.
+
+ANSWERS:
+
+Part 1: Theoretical Questions.
+1) One general use of user-level threads would be in a program that is designed to load big amounts of data, and to display it quickly to edge users.
+   User-level threads can help the programmer decide when enough data is already loaded, and to start displaying it to the user, so he will have
+   a fast and interactive experience with the program. Of course, this task requires the use of threads, and not different processes, because the data that is being loaded should be the one that will be displayed, and sharing this data between 2 processes with signals will be a mess. Secondly, we claim the using user-level thread would be optimal for this task, and we will make our case with an example:
+   on "Instagram" app - When opening, the feed page could be filled with infinite amount of photos and videos, so we have these 2 (minimum) tasks to complete at the same time. Thus, the programmer, using user-level thread, can make the delicate choice of moving between these threads, so we load enough photos and videos for the user to be able to watch and enjoy, but not too much so that the loading process will take too much time and lead to a bad experience.
+
+
+2) Advantages:
+    a) Security - each process has it's own scope of data.
+       Because the operating system doesn't allow a process to access another processes memories, the data of each process is more secured, not as in the case of kernel-level threads.
+    b) Stability - since each process is independent, in the case of
+       an error or an exception, it causes that specific process to terminate itself.
+       If google chrome would have created a kernel-level thread for each of it's tabs, once one of them would encounter an error - that would lead to the termination of the entire browser.
+
+   Disadvantages:
+    a) Time defficiency* - Since each tab is it's own process, switching between tabs requires making system calls which extends the overhead time of the cpu running time.
+    b) Memory defficiency* - Each process has it's own scope of memory, which contains the process code and it's global memory.
+    while using kernel-level threads, the code and global memory is being shared by all threads and thus not being repeated.
+
+3) Firstly, kill is a system call (a kind of interrupt) which triggers the kernel to send a signal of type SIGKILL which is being added to the processes signal queue. Then, after finishing the current command of the process, the matching handler of the signal is being called by the CPU and performs all the necessary tasks which will ensure that the process will terminate safely (for example, freeing memory which was allocated during that process). Eventually, the process will terminate.
+4) Real time is the actual time passes in reality. An example of using it is to measure how much time takes for a computer to turn on since we pressed the on button.
+Virtual time is individual to processes and it is the sum of the real time it has been resident in the CPU. An example of using it is to measure how much time it takes to run single and simple operation and by that to estimate how fast is our CPU (how many operations per second).
+5) Sigsetjmp is a function that saves the current state of a thread. It's signature is: int sigsetjmp(sigjmp_buf env, int savesigs). The first argument is a struct that we save into the state of the thread (what are the registers, where is the sp, pc, etc..) and the second argument saves the current signal mask if not zero.
+
+signlongjmp is a function that loads and go to a saved state of a thread. It's signature is: siglongjmp(sigjmp_buf env, int val). The first argument is the struct contains the state of the thread we want to load, and the second argument will be the return value of the signsetjmp we arrived from.
+
+
+Q2:
+Here are answers to theoreical questions
+if there were such questions in the exercise. 
