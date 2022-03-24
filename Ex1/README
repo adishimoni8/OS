@@ -3,13 +3,13 @@ Adi Shimoni (316342435), Guy Mizrahi (314791351)
 EX: 1
 
 FILES:
-osm.cpp -- a file with some code
+osm.cpp -- a library that provides functions to measure the average time it
+           takes to perform different operations.
 Makefile -- a makefile for assignment 2.
+graph.png -- a graph that illustrates the outcome of assignment 2.
 
 REMARKS:
-These are some remarks that
-I want the graders to know
-about this submission.
+None
 
 ANSWERS:
 
@@ -57,6 +57,5 @@ the working environment on the tasks.
    user permissions for all operations, instead of keeping the kernel actions
    hidden from user.
 the findings were interesting: the VM took more time than the other 2 options
-to perform the addition and function call tasks, yet it was slightly more
-optimal when it came to system call tasks. it shows how the operating system
-affects the optimization of certain tasks.
+to perform all tasks, it shows about the importance of the OS ability to
+manage tasks optimally.

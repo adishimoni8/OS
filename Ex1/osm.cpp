@@ -1,7 +1,5 @@
 #include "osm.h"
 #include <sys/time.h>
-#include <iostream>
-#include "osm.h"
 
 #define SECOND_TO_NANO 1000000000
 #define MICRO_TO_NANO 1000
