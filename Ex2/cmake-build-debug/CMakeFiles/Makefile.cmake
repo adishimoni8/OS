@@ -126,5 +126,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Ex2_real.dir/DependInfo.cmake"
+  "CMakeFiles/Ex2.dir/DependInfo.cmake"
   )
