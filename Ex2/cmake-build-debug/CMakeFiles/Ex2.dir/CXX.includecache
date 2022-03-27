@@ -6,7 +6,55 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Error.h
+iostream
+-
+map
+-
+tuple
+-
+utility
+-
+
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cc
+UThread.h
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.h
+
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.h
+uthreads.h
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.h
+setjmp.h
+-
+
 /cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/main.cpp
 iostream
 -
+uthreads.h
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.h
+
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.cc
+cstdlib
+-
+uthreads.h
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.h
+stdio.h
+-
+setjmp.h
+-
+signal.h
+-
+unistd.h
+-
+sys/time.h
+-
+stdbool.h
+-
+iostream
+-
+UThread.cc
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cc
+Error.h
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Error.h
+
+/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.h
 

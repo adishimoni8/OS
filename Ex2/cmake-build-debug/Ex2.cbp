@@ -80,7 +80,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Exceptions.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Timer.cc">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Timer.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cc">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.h">
+			<Option target="Ex2"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/main.cpp">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.cc">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.h">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/CMakeLists.txt">

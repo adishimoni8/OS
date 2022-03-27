@@ -123,6 +123,60 @@ Ex2/fast:
 	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/build
 .PHONY : Ex2/fast
 
+Timer.o: Timer.cc.o
+
+.PHONY : Timer.o
+
+# target to build an object file
+Timer.cc.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Timer.cc.o
+.PHONY : Timer.cc.o
+
+Timer.i: Timer.cc.i
+
+.PHONY : Timer.i
+
+# target to preprocess a source file
+Timer.cc.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Timer.cc.i
+.PHONY : Timer.cc.i
+
+Timer.s: Timer.cc.s
+
+.PHONY : Timer.s
+
+# target to generate assembly for a file
+Timer.cc.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Timer.cc.s
+.PHONY : Timer.cc.s
+
+UThread.o: UThread.cc.o
+
+.PHONY : UThread.o
+
+# target to build an object file
+UThread.cc.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cc.o
+.PHONY : UThread.cc.o
+
+UThread.i: UThread.cc.i
+
+.PHONY : UThread.i
+
+# target to preprocess a source file
+UThread.cc.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cc.i
+.PHONY : UThread.cc.i
+
+UThread.s: UThread.cc.s
+
+.PHONY : UThread.s
+
+# target to generate assembly for a file
+UThread.cc.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cc.s
+.PHONY : UThread.cc.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +204,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+uthreads.o: uthreads.cc.o
+
+.PHONY : uthreads.o
+
+# target to build an object file
+uthreads.cc.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cc.o
+.PHONY : uthreads.cc.o
+
+uthreads.i: uthreads.cc.i
+
+.PHONY : uthreads.i
+
+# target to preprocess a source file
+uthreads.cc.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cc.i
+.PHONY : uthreads.cc.i
+
+uthreads.s: uthreads.cc.s
+
+.PHONY : uthreads.s
+
+# target to generate assembly for a file
+uthreads.cc.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cc.s
+.PHONY : uthreads.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Ex2"
+	@echo "... Timer.o"
+	@echo "... Timer.i"
+	@echo "... Timer.s"
+	@echo "... UThread.o"
+	@echo "... UThread.i"
+	@echo "... UThread.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... uthreads.o"
+	@echo "... uthreads.i"
+	@echo "... uthreads.s"
 .PHONY : help
 
 

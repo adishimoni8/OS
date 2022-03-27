@@ -70,17 +70,62 @@ CMakeFiles/Ex2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/main.cpp.s"
 	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/main.cpp" -o CMakeFiles/Ex2.dir/main.cpp.s
 
+CMakeFiles/Ex2.dir/uthreads.cc.o: CMakeFiles/Ex2.dir/flags.make
+CMakeFiles/Ex2.dir/uthreads.cc.o: ../uthreads.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ex2.dir/uthreads.cc.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ex2.dir/uthreads.cc.o -c "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.cc"
+
+CMakeFiles/Ex2.dir/uthreads.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/uthreads.cc.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.cc" > CMakeFiles/Ex2.dir/uthreads.cc.i
+
+CMakeFiles/Ex2.dir/uthreads.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/uthreads.cc.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.cc" -o CMakeFiles/Ex2.dir/uthreads.cc.s
+
+CMakeFiles/Ex2.dir/UThread.cc.o: CMakeFiles/Ex2.dir/flags.make
+CMakeFiles/Ex2.dir/UThread.cc.o: ../UThread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ex2.dir/UThread.cc.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ex2.dir/UThread.cc.o -c "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cc"
+
+CMakeFiles/Ex2.dir/UThread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/UThread.cc.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cc" > CMakeFiles/Ex2.dir/UThread.cc.i
+
+CMakeFiles/Ex2.dir/UThread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/UThread.cc.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cc" -o CMakeFiles/Ex2.dir/UThread.cc.s
+
+CMakeFiles/Ex2.dir/Timer.cc.o: CMakeFiles/Ex2.dir/flags.make
+CMakeFiles/Ex2.dir/Timer.cc.o: ../Timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ex2.dir/Timer.cc.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ex2.dir/Timer.cc.o -c "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Timer.cc"
+
+CMakeFiles/Ex2.dir/Timer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/Timer.cc.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Timer.cc" > CMakeFiles/Ex2.dir/Timer.cc.i
+
+CMakeFiles/Ex2.dir/Timer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/Timer.cc.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Timer.cc" -o CMakeFiles/Ex2.dir/Timer.cc.s
+
 # Object files for target Ex2
 Ex2_OBJECTS = \
-"CMakeFiles/Ex2.dir/main.cpp.o"
+"CMakeFiles/Ex2.dir/main.cpp.o" \
+"CMakeFiles/Ex2.dir/uthreads.cc.o" \
+"CMakeFiles/Ex2.dir/UThread.cc.o" \
+"CMakeFiles/Ex2.dir/Timer.cc.o"
 
 # External object files for target Ex2
 Ex2_EXTERNAL_OBJECTS =
 
 Ex2.exe: CMakeFiles/Ex2.dir/main.cpp.o
+Ex2.exe: CMakeFiles/Ex2.dir/uthreads.cc.o
+Ex2.exe: CMakeFiles/Ex2.dir/UThread.cc.o
+Ex2.exe: CMakeFiles/Ex2.dir/Timer.cc.o
 Ex2.exe: CMakeFiles/Ex2.dir/build.make
 Ex2.exe: CMakeFiles/Ex2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Ex2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Ex2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ex2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
