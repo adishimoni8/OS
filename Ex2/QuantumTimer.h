@@ -5,7 +5,7 @@
 #ifndef EX2__QUANTUMTIMER_H_
 #define EX2__QUANTUMTIMER_H_
 
-#include "Exceptions.h"
+#include "Error.h"
 #include <sys/time.h>
 
 class QuantumTimer {

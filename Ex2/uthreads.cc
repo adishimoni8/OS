@@ -1,16 +1,15 @@
 #include <cstdlib>
 #include "uthreads.h"
-#include <stdio.h>
-#include <setjmp.h>
-#include <signal.h>
+#include <cstdio>
+#include <csetjmp>
+#include <csignal>
 #include <unistd.h>
-#include <sys/time.h>
-#include <stdbool.h>
+#include <ctime>
 #include <iostream>
 #include <deque>
 #include <unordered_set>
 #include "UThread.cc"
-#include "Exceptions.h"
+#include "Error.h"
 using namespace std;
 
 //Global variables:
@@ -28,8 +27,8 @@ static void main_func(){};
 
 static void sigvtalrm_handler(){
   	timer.inc_quantums();
-  	threads[cur_tid]->inc_quantums(); //todo check necessity of thread quantums
-	if (ready_threads.empty()){ //if current thread is only one running.
+  	threads[cur_tid]->inc_quantums(); //
+	if (ready_threads.empty()){ //if current thread is only the main one.
 	  return;
 	}
 	int where = threads[cur_tid]->env_snapshot();
@@ -37,8 +36,8 @@ static void sigvtalrm_handler(){
 	  threads[cur_tid]->set_state(READY); //sets thread RUNNING->READY.
 	  ready_threads.push_back(threads[cur_tid]->get_tid());
 	  cur_tid = ready_threads.front(); //sets current thread to first in line.
-	  ready_threads.pop_front();
-	  threads[cur_tid]->set_state(RUNNING);
+	  ready_threads.pop_front(); // pop the thread from queue.
+	  threads[cur_tid]->set_state(RUNNING); // set thread READY->RUNNING
 	  timer.start_timer(); //starts a new timer for current thread.
 	  threads[cur_tid]->load_env();
 	}
@@ -111,7 +110,7 @@ int uthread_terminate(int tid){
 }
 
 int uthread_block(int tid){
-  return 9;
+  return 0;
 }
 
 int uthread_resume(int tid){

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ex2.dir/Timer.cc.o"
+  "CMakeFiles/Ex2.dir/QuantumTimer.cc.o"
   "CMakeFiles/Ex2.dir/UThread.cc.o"
   "CMakeFiles/Ex2.dir/main.cpp.o"
   "CMakeFiles/Ex2.dir/uthreads.cc.o"
