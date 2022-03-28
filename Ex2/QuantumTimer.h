@@ -5,7 +5,7 @@
 #ifndef EX2__QUANTUMTIMER_H_
 #define EX2__QUANTUMTIMER_H_
 
-#include "Exceptions.h"
+#include "Exception.h"
 #include <sys/time.h>
 
 class QuantumTimer {
@@ -14,7 +14,7 @@ class QuantumTimer {
    * Default constructor for QuantumTimer, recieves amount of quantum
    * microseconds to calculate the time which timer starts counting at.
    */
-  QuantumTimer(int);
+  explicit QuantumTimer(int);
 
   /**
    * Starts the timer.

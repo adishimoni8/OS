@@ -3,4 +3,4 @@ project(Ex2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Ex2 main.cpp uthreads.cc UThread.cc UThread.h Exceptions.h QuantumTimer.cc QuantumTimer.h Exceptions.cc)
+add_executable(Ex2 main.cc uthreads.cc UThread.cc UThread.h Exception.h QuantumTimer.cc QuantumTimer.h Exception.cc EnvHelpers.cc)

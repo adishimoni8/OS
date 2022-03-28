@@ -8,8 +8,8 @@
 #include <iostream>
 #include <deque>
 #include <unordered_set>
-#include <w32api/windows.foundation.h>
 #include "UThread.cc"
+#include "EnvHelpers.cc"
 using namespace std;
 
 //Global variables:
@@ -46,12 +46,12 @@ static void sigvtalrm_handler(){
 static void to_mask_sigvtalrm(bool mask){
   if (mask){
 	if (sigprocmask(SIG_BLOCK, &sa.sa_mask, nullptr) != SUCCESS){
-	  Exceptions(SIGSET_ERR).print_error();
+	  Exception(SIGSET_ERR).print_error();
 	  exit(EXIT_FAILURE);
 	}
   } else{
 	if (sigprocmask(SIG_UNBLOCK, &sa.sa_mask, nullptr) != SUCCESS){
-	  Exceptions(SIGSET_ERR).print_error();
+	  Exception(SIGSET_ERR).print_error();
 	  exit(EXIT_FAILURE);
 	}
   }
@@ -60,23 +60,20 @@ static void to_mask_sigvtalrm(bool mask){
 //API
 int uthread_init(int quantum_usecs){
   if (quantum_usecs <= 0){ //invalid input check.
-	Exceptions(QUANTUM_ERR).print_error();
+	Exception(QUANTUM_ERR).print_error();
     return ERROR;
-  }
-  if (MAX_THREAD_NUM <= 0){
-	Exceptions(MAX_THREAD_ERR).print_error();
-	return ERROR;
   }
   sa.sa_handler = reinterpret_cast<_sig_func_ptr>(&sigvtalrm_handler);
   sa.sa_flags = 0;
   if (sigaction(SIGVTALRM, &sa, nullptr) != SUCCESS){ //masks SIGVTALRM.
-	Exceptions(SIGACT_ERR).print_error();
+	Exception(SIGACT_ERR).print_error();
 	exit(EXIT_FAILURE);
   }
   available_tid = 0;
   //todo implement creation of main function, not using uthread_spawn.
-  auto* main_thread = new UThread(0); // define main thread with tid 0
-  if (main_thread ==nullptr){
+  auto* main_thread = new (nothrow) UThread(0); // define main thread with tid 0
+  if (main_thread == nullptr){
+      // todo: add memory error (SYS)
     return ERROR;
   }
   threads[0] = main_thread;
@@ -88,16 +85,17 @@ int uthread_init(int quantum_usecs){
 int uthread_spawn(thread_entry_point entry_point){
   to_mask_sigvtalrm(true);
   if ((*entry_point) == nullptr){ //invalid input check.
-	Exceptions(INVALID_FUNC_ERR).print_error();
+	Exception(INVALID_FUNC_ERR).print_error();
 	return ERROR;
   }
   if (threads.size() >= MAX_THREAD_NUM){ //overflow check.
-	Exceptions(MAX_THREAD_ERR).print_error();
+	Exception(MAX_THREAD_ERR).print_error();
 	return ERROR;
   }
   int tid = available_tid;
-  auto thread = new UThread(tid);
+  auto thread = new (nothrow) UThread(tid);
   if (thread == nullptr){
+      // todo: add memory error (SYS)
 	exit(EXIT_FAILURE);
   }
   auto sp = (address_t) thread->get_stack() + STACK_SIZE - sizeof(address_t);

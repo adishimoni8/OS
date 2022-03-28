@@ -1,6 +1,6 @@
-#include "Exceptions.h"
+#include "Exception.h"
 
-Exceptions::Exceptions(ERR_KIND kind) {
+Exception::Exception(ERR_KIND kind) {
   	_kind = kind;
 	switch(kind){
 	case INVALID_FUNC_ERR:
@@ -29,7 +29,7 @@ Exceptions::Exceptions(ERR_KIND kind) {
 	}
 
 }
-void Exceptions::print_error() {
+void Exception::print_error() {
 	cerr << _message << endl;
 }
 
