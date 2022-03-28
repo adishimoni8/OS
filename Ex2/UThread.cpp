@@ -1,8 +1,6 @@
-//
-// Created by gopgo on 27/03/2022.
-//
-
 #include "UThread.h"
+
+UThread::~UThread() = default;
 
 UThread::UThread(int tid){
   _tid = tid;
@@ -46,5 +44,3 @@ void UThread::load_env(){
 char *UThread::get_stack() {
   return _stack;
 }
-
-UThread::~UThread() = default;

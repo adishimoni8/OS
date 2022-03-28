@@ -2,9 +2,10 @@
 #define EX2__EXCEPTIONS_H_
 
 #include <iostream>
-#include <map>
 using namespace std;
 
+#define ERROR -1
+#define SUCCESS 0
 #define QUANTUM_ERR_MSG "A none-positive quantum was given."
 #define TIMER_ERR_MSG "Failed setting the timer."
 #define SIGSET_ERR_MSG "Failed setting a signal."

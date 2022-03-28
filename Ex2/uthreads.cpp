@@ -8,11 +8,16 @@
 #include <iostream>
 #include <deque>
 #include <unordered_set>
-#include "UThread.cc"
-#include "EnvHelpers.cc"
+#include "Exception.h"
+#include "UThread.cpp"
+#include "EnvHelpers.h"
+#include "QuantumTimer.h"
 using namespace std;
 
-//Global variables:
+// Macros:
+#define BACKED 1
+
+//Global Variables:
 std::map<int, UThread *> threads;
 deque<int> ready_threads;
 unordered_set<int> blocked_threads;
@@ -23,11 +28,9 @@ int available_tid;
 
 //Utils:
 
-static void main_func(){};
-
 static void sigvtalrm_handler(){
   	timer.inc_quantums();
-  	threads[cur_tid]->inc_quantums(); //
+  	threads[cur_tid]->inc_quantums(); //inc the quantum of the thread finished.
 	if (ready_threads.empty()){ //if current thread is only the main one.
 	  return;
 	}
@@ -63,6 +66,7 @@ int uthread_init(int quantum_usecs){
 	Exception(QUANTUM_ERR).print_error();
     return ERROR;
   }
+  timer = QuantumTimer(quantum_usecs);
   sa.sa_handler = reinterpret_cast<_sig_func_ptr>(&sigvtalrm_handler);
   sa.sa_flags = 0;
   if (sigaction(SIGVTALRM, &sa, nullptr) != SUCCESS){ //masks SIGVTALRM.

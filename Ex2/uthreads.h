@@ -7,17 +7,13 @@
 #ifndef _UTHREADS_H
 #define _UTHREADS_H
 
-#include "QuantumTimer.h"
-#include "Exception.h"
+
 
 //typedefs:
 typedef unsigned long address_t;
 
 #define MAX_THREAD_NUM 100 /* maximal number of threads */
 #define STACK_SIZE 4096 /* stack size per UThread (in bytes) */
-#define BACKED 1
-#define ERROR -1
-#define SUCCESS 0
 
 typedef void (*thread_entry_point)(void);
 

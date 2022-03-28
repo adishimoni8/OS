@@ -1,7 +1,3 @@
-//
-// Created by gopgo on 27/03/2022.
-//
-
 #ifndef EX2__UTHREAD_H_
 #define EX2__UTHREAD_H_
 
@@ -81,7 +77,6 @@ class UThread {
   virtual ~UThread();
 
  private:
-  //fields
   int _tid; //id of thread.
   ThreadState _state; //state of thread (READY\RUNNING\BLOCKED)
   int _quantums; //amount of quantums thread has taken so far.

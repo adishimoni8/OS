@@ -1,9 +1,8 @@
-#include <stdio.h>
-#include <setjmp.h>
-#include <signal.h>
+#include <cstdio>
+#include <csetjmp>
+#include <csignal>
 #include <unistd.h>
-#include <sys/time.h>
-#include <stdbool.h>
+#include <ctime>
 
 #ifdef __x86_64__
 /* code for 64 bit Intel arch */
@@ -43,6 +42,5 @@ address_t translate_address(address_t addr)
     : "0" (addr));
     return ret;
 }
-
 
 #endif

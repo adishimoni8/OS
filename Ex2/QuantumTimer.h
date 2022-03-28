@@ -1,12 +1,10 @@
-//
-// Created by gopgo on 27/03/2022.
-//
-
 #ifndef EX2__QUANTUMTIMER_H_
 #define EX2__QUANTUMTIMER_H_
 
 #include "Exception.h"
 #include <sys/time.h>
+
+#define SECOND 1000000
 
 class QuantumTimer {
  public:
@@ -14,6 +12,9 @@ class QuantumTimer {
    * Default constructor for QuantumTimer, recieves amount of quantum
    * microseconds to calculate the time which timer starts counting at.
    */
+
+  QuantumTimer();
+
   explicit QuantumTimer(int);
 
   /**
