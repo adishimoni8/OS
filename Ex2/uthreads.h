@@ -8,7 +8,7 @@
 #define _UTHREADS_H
 
 #include "QuantumTimer.h"
-#include "Error.h"
+#include "Exceptions.h"
 
 //typedefs:
 typedef unsigned long address_t;

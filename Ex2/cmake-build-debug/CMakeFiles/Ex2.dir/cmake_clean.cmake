@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Ex2.dir/Error.cc.o"
   "CMakeFiles/Ex2.dir/QuantumTimer.cc.o"
   "CMakeFiles/Ex2.dir/UThread.cc.o"
   "CMakeFiles/Ex2.dir/main.cpp.o"

@@ -8,8 +8,8 @@
 #include <iostream>
 #include <deque>
 #include <unordered_set>
+#include <w32api/windows.foundation.h>
 #include "UThread.cc"
-#include "Error.h"
 using namespace std;
 
 //Global variables:
@@ -46,12 +46,12 @@ static void sigvtalrm_handler(){
 static void to_mask_sigvtalrm(bool mask){
   if (mask){
 	if (sigprocmask(SIG_BLOCK, &sa.sa_mask, nullptr) != SUCCESS){
-	  error_to_stderr(SIGSET_ERR);
+	  Exceptions(SIGSET_ERR).print_error();
 	  exit(EXIT_FAILURE);
 	}
   } else{
 	if (sigprocmask(SIG_UNBLOCK, &sa.sa_mask, nullptr) != SUCCESS){
-	  error_to_stderr(SIGSET_ERR);
+	  Exceptions(SIGSET_ERR).print_error();
 	  exit(EXIT_FAILURE);
 	}
   }
@@ -60,31 +60,39 @@ static void to_mask_sigvtalrm(bool mask){
 //API
 int uthread_init(int quantum_usecs){
   if (quantum_usecs <= 0){ //invalid input check.
-	error_to_stderr(QUANTUM_ERR);
+	Exceptions(QUANTUM_ERR).print_error();
     return ERROR;
   }
   if (MAX_THREAD_NUM <= 0){
-	error_to_stderr(MAX_THREAD_ERR);
+	Exceptions(MAX_THREAD_ERR).print_error();
 	return ERROR;
   }
   sa.sa_handler = reinterpret_cast<_sig_func_ptr>(&sigvtalrm_handler);
   sa.sa_flags = 0;
   if (sigaction(SIGVTALRM, &sa, nullptr) != SUCCESS){ //masks SIGVTALRM.
-	error_to_stderr(SIGACT_ERR);
+	Exceptions(SIGACT_ERR).print_error();
 	exit(EXIT_FAILURE);
   }
   available_tid = 0;
-  return uthread_spawn(main_func);
+  //todo implement creation of main function, not using uthread_spawn.
+  auto* main_thread = new UThread(0); // define main thread with tid 0
+  if (main_thread ==nullptr){
+    return ERROR;
+  }
+  threads[0] = main_thread;
+  ready_threads.push_back(available_tid);
+  available_tid++;
+  return SUCCESS;
 }
 
 int uthread_spawn(thread_entry_point entry_point){
   to_mask_sigvtalrm(true);
   if ((*entry_point) == nullptr){ //invalid input check.
-	error_to_stderr(INVALID_FUNC_ERR);
+	Exceptions(INVALID_FUNC_ERR).print_error();
 	return ERROR;
   }
   if (threads.size() >= MAX_THREAD_NUM){ //overflow check.
-	error_to_stderr(MAX_THREAD_ERR);
+	Exceptions(MAX_THREAD_ERR).print_error();
 	return ERROR;
   }
   int tid = available_tid;
