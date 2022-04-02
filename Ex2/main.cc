@@ -9,7 +9,6 @@ void func() {
 
 void func1() {
   std::cout << "buy" << std::endl;
-  uthread_resume(2);
 }
 
 int main() {

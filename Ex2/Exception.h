@@ -12,6 +12,10 @@ using namespace std;
 #define MAX_THREAD_ERR_MSG "Exceeded max amount of threads."
 #define SIGACT_ERR_MSG "Failed inspecting or handling signal."
 #define INVALID_FUNC_ERR_MSG "Invalid function given as input."
+#define MEM_ERR_MSG "Memory error."
+#define INVALID_TID_ERR_MSG "Invalid Thread ID."
+#define MAIN_THREAD_BLOCK_ERR_MSG "Attempted to block Main Thread."
+#define MAIN_THREAD_SLEEP_ERR_MSG "Attempted to sleep Main Thread."
 
 /**
  * Enum describing the different error type origins.
@@ -24,13 +28,17 @@ enum ERR_TYPE{
 /**
  * Enum containing all possible errors.
  */
-enum ERR_KIND{ //todo define which enums match which type.
+enum ERR_KIND{
     QUANTUM_ERR,
     TIMER_ERR,
     SIGSET_ERR,
     MAX_THREAD_ERR,
     SIGACT_ERR,
-    INVALID_FUNC_ERR
+    INVALID_FUNC_ERR,
+    MEM_ERR,
+    INVALID_TID_ERR,
+    MAIN_THREAD_BLOCK_ERR,
+    MAIN_THREAD_SLEEP_ERR,
 };
 
 class Exception{
@@ -45,6 +53,8 @@ class Exception{
    * Prints error message upon demand.
    */
   void print_error();
+
+  ERR_TYPE get_type();
 
  private:
   ERR_TYPE _type; //type of error.

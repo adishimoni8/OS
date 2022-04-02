@@ -80,28 +80,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Error.cc">
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/EnvHelpers.h">
 			<Option target="Ex2"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Error.h">
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Exception.cpp">
 			<Option target="Ex2"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/QuantumTimer.cc">
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Exception.h">
+			<Option target="Ex2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/QuantumTimer.cpp">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/QuantumTimer.h">
 			<Option target="Ex2"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cc">
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cpp">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.h">
 			<Option target="Ex2"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/main.cpp">
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/main.cc">
 			<Option target="Ex2"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.cc">
+		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.cpp">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.h">

@@ -123,140 +123,140 @@ Ex2/fast:
 	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/build
 .PHONY : Ex2/fast
 
-Error.o: Error.cc.o
+Exception.o: Exception.cpp.o
 
-.PHONY : Error.o
+.PHONY : Exception.o
 
 # target to build an object file
-Error.cc.o:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Error.cc.o
-.PHONY : Error.cc.o
+Exception.cpp.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Exception.cpp.o
+.PHONY : Exception.cpp.o
 
-Error.i: Error.cc.i
+Exception.i: Exception.cpp.i
 
-.PHONY : Error.i
+.PHONY : Exception.i
 
 # target to preprocess a source file
-Error.cc.i:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Error.cc.i
-.PHONY : Error.cc.i
+Exception.cpp.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Exception.cpp.i
+.PHONY : Exception.cpp.i
 
-Error.s: Error.cc.s
+Exception.s: Exception.cpp.s
 
-.PHONY : Error.s
+.PHONY : Exception.s
 
 # target to generate assembly for a file
-Error.cc.s:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Error.cc.s
-.PHONY : Error.cc.s
+Exception.cpp.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Exception.cpp.s
+.PHONY : Exception.cpp.s
 
-QuantumTimer.o: QuantumTimer.cc.o
+QuantumTimer.o: QuantumTimer.cpp.o
 
 .PHONY : QuantumTimer.o
 
 # target to build an object file
-QuantumTimer.cc.o:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/QuantumTimer.cc.o
-.PHONY : QuantumTimer.cc.o
+QuantumTimer.cpp.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/QuantumTimer.cpp.o
+.PHONY : QuantumTimer.cpp.o
 
-QuantumTimer.i: QuantumTimer.cc.i
+QuantumTimer.i: QuantumTimer.cpp.i
 
 .PHONY : QuantumTimer.i
 
 # target to preprocess a source file
-QuantumTimer.cc.i:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/QuantumTimer.cc.i
-.PHONY : QuantumTimer.cc.i
+QuantumTimer.cpp.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/QuantumTimer.cpp.i
+.PHONY : QuantumTimer.cpp.i
 
-QuantumTimer.s: QuantumTimer.cc.s
+QuantumTimer.s: QuantumTimer.cpp.s
 
 .PHONY : QuantumTimer.s
 
 # target to generate assembly for a file
-QuantumTimer.cc.s:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/QuantumTimer.cc.s
-.PHONY : QuantumTimer.cc.s
+QuantumTimer.cpp.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/QuantumTimer.cpp.s
+.PHONY : QuantumTimer.cpp.s
 
-UThread.o: UThread.cc.o
+UThread.o: UThread.cpp.o
 
 .PHONY : UThread.o
 
 # target to build an object file
-UThread.cc.o:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cc.o
-.PHONY : UThread.cc.o
+UThread.cpp.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cpp.o
+.PHONY : UThread.cpp.o
 
-UThread.i: UThread.cc.i
+UThread.i: UThread.cpp.i
 
 .PHONY : UThread.i
 
 # target to preprocess a source file
-UThread.cc.i:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cc.i
-.PHONY : UThread.cc.i
+UThread.cpp.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cpp.i
+.PHONY : UThread.cpp.i
 
-UThread.s: UThread.cc.s
+UThread.s: UThread.cpp.s
 
 .PHONY : UThread.s
 
 # target to generate assembly for a file
-UThread.cc.s:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cc.s
-.PHONY : UThread.cc.s
+UThread.cpp.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/UThread.cpp.s
+.PHONY : UThread.cpp.s
 
-main.o: main.cpp.o
+main.o: main.cc.o
 
 .PHONY : main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.cc.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/main.cc.o
+.PHONY : main.cc.o
 
-main.i: main.cpp.i
+main.i: main.cc.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.cc.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/main.cc.i
+.PHONY : main.cc.i
 
-main.s: main.cpp.s
+main.s: main.cc.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.cc.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/main.cc.s
+.PHONY : main.cc.s
 
-uthreads.o: uthreads.cc.o
+uthreads.o: uthreads.cpp.o
 
 .PHONY : uthreads.o
 
 # target to build an object file
-uthreads.cc.o:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cc.o
-.PHONY : uthreads.cc.o
+uthreads.cpp.o:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cpp.o
+.PHONY : uthreads.cpp.o
 
-uthreads.i: uthreads.cc.i
+uthreads.i: uthreads.cpp.i
 
 .PHONY : uthreads.i
 
 # target to preprocess a source file
-uthreads.cc.i:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cc.i
-.PHONY : uthreads.cc.i
+uthreads.cpp.i:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cpp.i
+.PHONY : uthreads.cpp.i
 
-uthreads.s: uthreads.cc.s
+uthreads.s: uthreads.cpp.s
 
 .PHONY : uthreads.s
 
 # target to generate assembly for a file
-uthreads.cc.s:
-	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cc.s
-.PHONY : uthreads.cc.s
+uthreads.cpp.s:
+	$(MAKE) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/uthreads.cpp.s
+.PHONY : uthreads.cpp.s
 
 # Help Target
 help:
@@ -267,9 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Ex2"
-	@echo "... Error.o"
-	@echo "... Error.i"
-	@echo "... Error.s"
+	@echo "... Exception.o"
+	@echo "... Exception.i"
+	@echo "... Exception.s"
 	@echo "... QuantumTimer.o"
 	@echo "... QuantumTimer.i"
 	@echo "... QuantumTimer.s"

@@ -6,6 +6,7 @@ UThread::UThread(int tid){
   _tid = tid;
   _state = READY;
   _quantums = 0;
+  _quantums_to_sleep = 0;
 }
 
 
@@ -44,3 +45,17 @@ void UThread::load_env(){
 char *UThread::get_stack() {
   return _stack;
 }
+
+void UThread::set_sleep_time(int quantums) {
+    _quantums_to_sleep = quantums;
+}
+
+int UThread::get_sleep_time() {
+    return _quantums_to_sleep;
+}
+
+void UThread::dec_sleep_time() {
+    _quantums_to_sleep--;
+}
+
+

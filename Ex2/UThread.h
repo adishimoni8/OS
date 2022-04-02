@@ -8,7 +8,9 @@
 enum ThreadState{
 	RUNNING,
 	READY,
-	BLOCKED
+	BLOCKED,
+    SLEEPING,
+    BLOCKED_AND_SLEEPING,
 };
 class UThread {
  public:
@@ -71,6 +73,12 @@ class UThread {
    */
   char* get_stack();
 
+  void set_sleep_time(int usec);
+
+  int get_sleep_time();
+
+  void dec_sleep_time();
+
   /**
    * default destructor of specified thread.
    */
@@ -82,6 +90,7 @@ class UThread {
   int _quantums; //amount of quantums thread has taken so far.
   sigjmp_buf _env; //environment and status of thread.
   char _stack[STACK_SIZE]{}; //stack of thread.
+  int _quantums_to_sleep; // amount of quantums for thread to sleep.
 };
 
 #endif //EX2__UTHREAD_H_

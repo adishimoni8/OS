@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.15)
-project(Ex2)
+cmake_minimum_required(VERSION 3.21)
+project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Ex2 main.cc uthreads.cpp UThread.cpp UThread.h Exception.h QuantumTimer.cpp QuantumTimer.h Exception.cpp EnvHelpers.h)
+add_executable(untitled main.cpp Exception.cpp QuantumTimer.cpp UThread.cpp uthreads.cpp)
