@@ -6,12 +6,13 @@
 #include <map>
 #include "Exception.h"
 #include "UThread.h"
-#include "EnvHelpers.h"
 #include "QuantumTimer.h"
+#include "EnvHelpers.h"
 using namespace std;
 
 // Macros:
 #define BACKED 1
+#define MAIN_TID 0
 
 //Global Variables:
 std::map<int, UThread *> threads;
@@ -22,8 +23,18 @@ QuantumTimer timer;
 int cur_tid;
 int available_tid;
 int num_of_threads;
+sigset_t masked_signals;
 
-//Utils:
+//Utils (inner functions):
+
+static void update_available_tid(){
+  int i = available_tid + 1;
+  while (threads[i] != nullptr){
+	++i;
+  }
+  available_tid = i;
+}
+
 static void erase_element_from_queue(deque<int> *queue, int tid){
     for (auto it = queue->begin(); it != queue->end(); it++){
         if (*it == tid){
@@ -33,10 +44,15 @@ static void erase_element_from_queue(deque<int> *queue, int tid){
     }
 }
 
-static int free_all(){
-    for (int i = 0; i < threads.size(); ++i){
-        delete threads[i];
+static int free_all_memory(){
+    for (unsigned int i = 0; i < threads.size(); ++i){
+        if (threads[i] != nullptr){
+            delete threads[i];
+        }
     }
+    threads.clear();
+    blocked_threads.clear();
+    ready_threads.clear();
     return SUCCESS;
 }
 
@@ -60,24 +76,32 @@ static void handle_sleepers(){
     }
 }
 
-
 static int handle_err(ERR_KIND kind){
     Exception exception = Exception(kind);
     exception.print_error();
     if (exception.get_type() == SYS_ERR){
-        free_all();
+	  free_all_memory();
         exit(EXIT_FAILURE);
     }
     return ERROR;
 }
 
-static int to_mask_sigvtalrm(bool mask){
+static void init_masked_signals(){
+  if (sigemptyset(&masked_signals) < 0) {
+	handle_err(SIGSET_ERR);
+  }
+  if (sigaddset(&masked_signals,SIGVTALRM) < 0) {
+	handle_err(SIGSET_ERR);
+  }
+}
+
+static int to_mask_signals(bool mask){
     if (mask){
-        if (sigprocmask(SIG_BLOCK, &sa.sa_mask, nullptr) != SUCCESS){
+        if (sigprocmask(SIG_BLOCK, &masked_signals, nullptr) != SUCCESS){
             return handle_err(SIGSET_ERR);
         }
     } else{
-        if (sigprocmask(SIG_UNBLOCK, &sa.sa_mask, nullptr) != SUCCESS){
+        if (sigprocmask(SIG_UNBLOCK, &masked_signals, nullptr) != SUCCESS){
             return handle_err(SIGSET_ERR);
         }
     }
@@ -89,6 +113,7 @@ static void sigvtalrm_handler(int sig_num){
   	threads[cur_tid]->inc_quantums(); //inc the quantum of the thread finished.
     handle_sleepers();
 	if (ready_threads.empty()){ //if current thread is only the main one.
+      timer.start_timer();
 	  return;
 	}
 	int where = threads[cur_tid]->env_snapshot();
@@ -97,7 +122,7 @@ static void sigvtalrm_handler(int sig_num){
 	  ready_threads.push_back(threads[cur_tid]->get_tid());
 	  cur_tid = ready_threads.front(); //sets current thread to first in line.
 	  ready_threads.pop_front(); // pop the thread from queue.
-	  threads[cur_tid]->set_state(RUNNING); // set thread READY->RUNNING
+	  threads[cur_tid]->set_state(RUNNING); // set thread READY->RUNNING.
 	  timer.start_timer(); //starts a new timer for current thread.
 	  threads[cur_tid]->load_env();
 	}
@@ -105,35 +130,50 @@ static void sigvtalrm_handler(int sig_num){
 
 //API
 int uthread_init(int quantum_usecs){
-  if (quantum_usecs <= 0){ //invalid input check.
+  // Sanity check:
+  if (quantum_usecs <= 0){
     return handle_err(QUANTUM_ERR);
   }
+
+  // Set timer:
   timer = QuantumTimer(quantum_usecs);
+
+  // Init masked signals:
+  init_masked_signals();
+
+  // Mask sigvtalrm:
   sa.sa_handler = &sigvtalrm_handler;
-  sa.sa_flags = 0;
-  if (sigaction(SIGVTALRM, &sa, nullptr) != SUCCESS){ //masks SIGVTALRM.
+  if (sigaction(SIGVTALRM, &sa, nullptr) != SUCCESS){
     return handle_err(SIGACT_ERR);
   }
-  available_tid = 0;
-  auto* main_thread = new (nothrow) UThread(0); // define main thread with tid 0
+
+  // Initiate Main Thread:
+  auto* main_thread = new (nothrow) UThread(MAIN_TID);
   if (main_thread == nullptr){
     return handle_err(MEM_ERR);
   }
-  threads[0] = main_thread;
-  ready_threads.push_back(available_tid);
-  available_tid = 1;
+  threads[MAIN_TID] = main_thread;
+  main_thread->set_state(RUNNING);
   timer.start_timer();
+
+  // Update global vars:
+  available_tid = 1;
+  num_of_threads++;
   return SUCCESS;
 }
 
 int uthread_spawn(thread_entry_point entry_point){
-  to_mask_sigvtalrm(true);
-  if ((*entry_point) == nullptr){ //invalid input check.
+  to_mask_signals(true);
+
+  // Sanity checks:
+  if ((*entry_point) == nullptr){
     return handle_err(INVALID_FUNC_ERR);
   }
   if (num_of_threads >= MAX_THREAD_NUM){ //overflow check.
       return handle_err(MAX_THREAD_ERR);
   }
+
+  // Create the new thread:
   int tid = available_tid;
   auto thread = new (nothrow) UThread(tid);
   if (thread == nullptr){
@@ -148,133 +188,181 @@ int uthread_spawn(thread_entry_point entry_point){
   threads[tid] = thread; //sets thread to be last in line in queue.
   thread->set_state(READY);
   ready_threads.push_back(tid);
-  int i = available_tid + 1;
-    while (threads[i] != nullptr){
-        ++i;
-    }
-  available_tid = i;
+
+  //Update global vars:
   num_of_threads++;
-  to_mask_sigvtalrm(false);
+  update_available_tid();
+
+  to_mask_signals(false);
   return tid;
 }
 
 int uthread_terminate(int tid){
-    to_mask_sigvtalrm(true);
-    if (threads.find(tid) == threads.end()){
-        to_mask_sigvtalrm(false);
-        return handle_err(INVALID_TID_ERR);
-    }
-    if (tid == 0){
-        free_all();
-        exit(EXIT_SUCCESS);
-    }
-    UThread *thread = threads[tid];
-    ThreadState state = thread->get_state();
-    delete thread;
-    threads[tid] = nullptr;
-    if (available_tid > tid){
-        available_tid = tid;
-    }
-    if (state == READY){
-        erase_element_from_queue(&ready_threads,tid);
-    } else if (state == BLOCKED || state == SLEEPING || state == BLOCKED_AND_SLEEPING){
-        blocked_threads.erase(tid);
-    } else if (state == RUNNING) {
-        cur_tid = ready_threads.front();
-        ready_threads.pop_front();
-        threads[cur_tid]->set_state(RUNNING);
-        handle_sleepers();
-        timer.inc_quantums();
-        timer.start_timer();
-        to_mask_sigvtalrm(false);
-        num_of_threads--;
-        threads[cur_tid]->load_env();
-    }
-    num_of_threads--;
-    to_mask_sigvtalrm(false);
-    return SUCCESS;
+  to_mask_signals(true);
+
+  //Sanity checks:
+  if (threads.find(tid) == threads.end()){
+	to_mask_signals(false);
+	  return handle_err(INVALID_TID_ERR);
+  }
+
+  // Exit the program:
+  if (tid == 0){
+	free_all_memory();
+	exit(EXIT_SUCCESS);
+  }
+
+  // Find and terminate thread:
+  UThread *thread = threads[tid];
+  ThreadState state = thread->get_state();
+  delete thread;
+  threads[tid] = nullptr;
+
+  // Update global vars:
+  if (available_tid > tid){
+	  available_tid = tid;
+  }
+  num_of_threads--;
+
+  // Decide what to do next:
+  switch(state){
+    case READY:
+	  erase_element_from_queue(&ready_threads,tid);
+	  break;
+    case RUNNING:
+	  cur_tid = ready_threads.front();
+	  ready_threads.pop_front();
+	  threads[cur_tid]->set_state(RUNNING);
+	  handle_sleepers();
+	  timer.inc_quantums();
+	  timer.start_timer();
+	  to_mask_signals(false);
+	  threads[cur_tid]->load_env();
+	  break;
+	default: // All other states
+	  blocked_threads.erase(tid);
+	  break;
+  }
+
+  to_mask_signals(false);
+  return SUCCESS;
 }
 
 int uthread_block(int tid){
-    to_mask_sigvtalrm(true);
-    if (threads.find(tid) == threads.end()){
-        to_mask_sigvtalrm(false);
-        return handle_err(INVALID_TID_ERR);
-    }
-    if (tid == 0){
-        to_mask_sigvtalrm(false);
-        return handle_err(MAIN_THREAD_BLOCK_ERR);
-    }
-    UThread *thread = threads[tid];
-    ThreadState state = thread->get_state();
-    if (state == READY){
-        erase_element_from_queue(&ready_threads,tid);
-        thread->set_state(BLOCKED);
-        blocked_threads.insert(tid);
-    } else if (state == BLOCKED || state == BLOCKED_AND_SLEEPING){
-        return SUCCESS;
-    } else if (state == SLEEPING){
-        thread->set_state(BLOCKED_AND_SLEEPING);
-    } else if (state == RUNNING) {
-        cur_tid = ready_threads.front();
-        ready_threads.pop_front();
-        thread->set_state(BLOCKED);
-        threads[cur_tid]->set_state(RUNNING);
-        handle_sleepers();
-        timer.inc_quantums();
-        timer.start_timer();
-        thread->inc_quantums();
-        thread->env_snapshot();
-        threads[cur_tid]->load_env();
-    }
-    to_mask_sigvtalrm(false);
-    return SUCCESS;
+  to_mask_signals(true);
+
+  // Sanity checks:
+  if (threads.find(tid) == threads.end()){
+	to_mask_signals(false);
+	  return handle_err(INVALID_TID_ERR);
+  }
+  if (tid == 0){
+	to_mask_signals(false);
+	  return handle_err(MAIN_THREAD_BLOCK_ERR);
+  }
+
+  // Find and block thread:
+  UThread *thread = threads[tid];
+  ThreadState state = thread->get_state();
+
+  switch(state){
+	case BLOCKED:
+	  break;
+	case BLOCKED_AND_SLEEPING:
+	  break;
+    case READY:
+	  erase_element_from_queue(&ready_threads,tid);
+	  thread->set_state(BLOCKED);
+	  blocked_threads.insert(tid);
+	  break;
+    case SLEEPING:
+	  thread->set_state(BLOCKED_AND_SLEEPING);
+	  break;
+    case RUNNING:
+	  int where = thread->env_snapshot();
+	  if (where != BACKED) {
+		cur_tid = ready_threads.front();
+		ready_threads.pop_front();
+		threads[cur_tid]->set_state(RUNNING);
+		handle_sleepers();
+		timer.inc_quantums();
+		timer.start_timer();
+		thread->inc_quantums();
+		thread->set_state(BLOCKED);
+		blocked_threads.insert(tid);
+		to_mask_signals(false);
+		threads[cur_tid]->load_env();
+	  }
+	  break;
+  }
+  to_mask_signals(false);
+  return SUCCESS;
 }
 
 int uthread_resume(int tid){
-    to_mask_sigvtalrm(true);
-    if (threads.find(tid) == threads.end()){
-        to_mask_sigvtalrm(false);
-        return handle_err(INVALID_TID_ERR);
-    }
-    UThread *thread = threads[tid];
-    ThreadState state = thread->get_state();
-    if (state == BLOCKED){
-        thread->set_state(READY);
-        blocked_threads.erase(tid);
-        ready_threads.push_back(tid);
-    } else if (state == BLOCKED_AND_SLEEPING){
-        thread->set_state(SLEEPING);
-    }
-    to_mask_sigvtalrm(false);
-    return SUCCESS;
+  to_mask_signals(true);
+
+  // Sanity checks:
+  if (threads.find(tid) == threads.end()){
+	to_mask_signals(false);
+	  return handle_err(INVALID_TID_ERR);
+  }
+
+  // Find and resume thread:
+  UThread *thread = threads[tid];
+  ThreadState state = thread->get_state();
+
+  switch(state){
+    case RUNNING:
+    case READY:
+    case SLEEPING:
+    case BLOCKED:
+	  thread->set_state(READY);
+	  blocked_threads.erase(tid);
+	  ready_threads.push_back(tid);
+	  break;
+    case BLOCKED_AND_SLEEPING:
+	  thread->set_state(SLEEPING);
+	  break;
+  }
+
+  to_mask_signals(false);
+  return SUCCESS;
 }
 
 int uthread_sleep(int num_quantums){
-    to_mask_sigvtalrm(true);
-    if (num_quantums <= 0){ //invalid input check.
-        to_mask_sigvtalrm(false);
-        return handle_err(QUANTUM_ERR);
-    }
-    if (cur_tid == 0){
-        to_mask_sigvtalrm(false);
-        return handle_err(MAIN_THREAD_SLEEP_ERR);
-    }
-    UThread *thread = threads[cur_tid];
-    int tid = cur_tid;
-    cur_tid = ready_threads.front();
-    ready_threads.pop_front();
-    threads[cur_tid]->set_state(RUNNING);
-    handle_sleepers();
-    timer.inc_quantums();
-    timer.start_timer();
-    thread->inc_quantums();
-    thread->set_state(SLEEPING);
-    thread->set_sleep_time(num_quantums);
-    blocked_threads.insert(tid);
-    thread->env_snapshot();
-    threads[cur_tid]->load_env();
-    to_mask_sigvtalrm(false);
+  to_mask_signals(true);
+
+  // Sanity checks:
+  if (num_quantums <= 0){ //invalid input check.
+	to_mask_signals(false);
+	  return handle_err(QUANTUM_ERR);
+  }
+  if (cur_tid == 0){
+	to_mask_signals(false);
+	  return handle_err(MAIN_THREAD_SLEEP_ERR);
+  }
+
+  // Find and make thread sleep:
+  int sleeper_tid = cur_tid;
+  UThread *thread = threads[sleeper_tid];
+  int where = thread->env_snapshot();
+  if (where != BACKED) {
+	cur_tid = ready_threads.front();
+	ready_threads.pop_front();
+	threads[cur_tid]->set_state(RUNNING);
+	handle_sleepers();
+	timer.inc_quantums();
+	timer.start_timer();
+	thread->inc_quantums();
+	thread->set_state(SLEEPING);
+	thread->set_sleep_time(num_quantums);
+	blocked_threads.insert(sleeper_tid);
+	to_mask_signals(false);
+	threads[cur_tid]->load_env();
+  }
+  to_mask_signals(false);
+  return SUCCESS;
 }
 
 int uthread_get_tid(){

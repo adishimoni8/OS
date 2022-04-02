@@ -5,6 +5,7 @@
 #include <setjmp.h>
 
 
+// all possible states for a thread.
 enum ThreadState{
 	RUNNING,
 	READY,
@@ -12,6 +13,10 @@ enum ThreadState{
     SLEEPING,
     BLOCKED_AND_SLEEPING,
 };
+
+/**
+ * This class represents a single thread.
+ */
 class UThread {
  public:
   /**

@@ -43,10 +43,18 @@ Exception::Exception(ERR_KIND kind) {
 	    _message = MEM_ERR_MSG;
 	    _type = SYS_ERR;
 	}
-
 }
+
 void Exception::print_error() {
-	flush(cerr << "Error: " << _message << endl);
+    string preview;
+    switch(_type) {
+        case SYS_ERR:
+            preview = SYS_ERR_MSG;
+            break;
+        case LIB_ERR:
+            preview = LIB_ERR_MSG;
+    }
+	cerr << preview << _message << endl;
 }
 
 ERR_TYPE Exception::get_type() {

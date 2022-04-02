@@ -16,6 +16,8 @@ using namespace std;
 #define INVALID_TID_ERR_MSG "Invalid Thread ID."
 #define MAIN_THREAD_BLOCK_ERR_MSG "Attempted to block Main Thread."
 #define MAIN_THREAD_SLEEP_ERR_MSG "Attempted to sleep Main Thread."
+#define SYS_ERR_MSG "system error: "
+#define LIB_ERR_MSG "thread library error: "
 
 /**
  * Enum describing the different error type origins.
@@ -41,6 +43,9 @@ enum ERR_KIND{
     MAIN_THREAD_SLEEP_ERR,
 };
 
+/**
+ * This class represents all possible exceptions and categorizes them according to their origin and type.
+ */
 class Exception{
  public:
   /**

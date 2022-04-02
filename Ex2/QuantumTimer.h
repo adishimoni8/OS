@@ -6,6 +6,9 @@
 
 #define SECOND 1000000
 
+/**
+ * This class represents a timer to measure the passing virtual time.
+ */
 class QuantumTimer {
  public:
   /**

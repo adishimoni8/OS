@@ -23,6 +23,7 @@ itimerval &QuantumTimer::get_timer(){
 int QuantumTimer::get_quantums() const{
   return _quantums;
 }
+
 void QuantumTimer::inc_quantums(){
   _quantums++;
 }

@@ -28,9 +28,7 @@ void func3() {
     uthread_terminate(2);
     cout << "Thread 3 terminated thread 2" << endl;
     cout << "Thread 3 is trying to block main" << endl;
-    uthread_block(0);
-    cout << "Thread 3 terminating itself" << endl;
-    uthread_terminate(uthread_get_tid());
+    cout << "Thread 3 terminating the program" << endl;
 }
 
 void func7() {
@@ -58,7 +56,7 @@ void func4() {
     cout << "Thread 4 start function..." << endl;
     cout << "Good tid: " << uthread_get_tid() << " == 1" << endl;
     cout << "Thread 4 terminating itself" << endl;
-    uthread_terminate(uthread_get_tid());
+    uthread_terminate(0);
 }
 
 void func5() {
@@ -84,9 +82,8 @@ void func10() {
 }
 
 int main() {
-    uthread_init(100);
-    cout << "Main Thread has been created" << endl;
-
+    uthread_init(50);
+//    cout << "Main Thread has been created" << endl;
 //    // Test 1:
 //    uthread_spawn(func1);
 //    cout << "1 Thread has been created" << endl;
@@ -107,7 +104,10 @@ int main() {
 //    for ( ;; ){}
 //    return 0;
 
-    // Test 3:
+    uthread_init(5);
+    cout << "Main Thread has been created" << endl;
+
+     //Test 3:
     for (int i = 0; i < MAX_THREAD_NUM + 100; ++i){
         if (uthread_spawn(func10)){
             cout << "created" << endl;
@@ -116,5 +116,8 @@ int main() {
         cout << uthread_get_total_quantums() << endl;
     }
 
-    return 0;
+    for (int i = 0; i < 10000000; ++i){
+
+    }
+    uthread_terminate(0);
 }
