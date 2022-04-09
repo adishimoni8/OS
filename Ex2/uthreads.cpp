@@ -201,9 +201,9 @@ int uthread_terminate(int tid){
   to_mask_signals(true);
 
   //Sanity checks:
-  if (threads.find(tid) == threads.end()){
+  if ((threads.find(tid) == threads.end()) || (threads[tid] == nullptr)){
 	to_mask_signals(false);
-	  return handle_err(INVALID_TID_ERR);
+    return handle_err(INVALID_TID_ERR);
   }
 
   // Exit the program:
@@ -252,9 +252,9 @@ int uthread_block(int tid){
   to_mask_signals(true);
 
   // Sanity checks:
-  if (threads.find(tid) == threads.end()){
+  if (threads.find(tid) == threads.end() || threads[tid] == nullptr){
 	to_mask_signals(false);
-	  return handle_err(INVALID_TID_ERR);
+    return handle_err(INVALID_TID_ERR);
   }
   if (tid == 0){
 	to_mask_signals(false);
@@ -303,7 +303,7 @@ int uthread_resume(int tid){
   to_mask_signals(true);
 
   // Sanity checks:
-  if (threads.find(tid) == threads.end()){
+    if (threads.find(tid) == threads.end() || threads[tid] == nullptr){
 	to_mask_signals(false);
 	  return handle_err(INVALID_TID_ERR);
   }
@@ -314,8 +314,11 @@ int uthread_resume(int tid){
 
   switch(state){
     case RUNNING:
+        break;
     case READY:
+        break;
     case SLEEPING:
+        break;
     case BLOCKED:
 	  thread->set_state(READY);
 	  blocked_threads.erase(tid);
@@ -325,7 +328,7 @@ int uthread_resume(int tid){
 	  thread->set_state(SLEEPING);
 	  break;
   }
-
+//  threads[tid]->inc_quantums();
   to_mask_signals(false);
   return SUCCESS;
 }
@@ -374,5 +377,8 @@ int uthread_get_total_quantums(){
 }
 
 int uthread_get_quantums(int tid){
-  return threads[cur_tid]->get_quantums();
+  if (threads.find(tid) == threads.end() || threads[tid] == nullptr) {
+      return handle_err(INVALID_TID_ERR);
+  }
+  return threads[tid]->get_quantums();
 }

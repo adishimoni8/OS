@@ -1,12 +1,16 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Ex2.dir/Exception.cpp.o"
+  "CMakeFiles/Ex2.dir/Exception.cpp.o.d"
   "CMakeFiles/Ex2.dir/QuantumTimer.cpp.o"
+  "CMakeFiles/Ex2.dir/QuantumTimer.cpp.o.d"
+  "CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o"
+  "CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o.d"
   "CMakeFiles/Ex2.dir/UThread.cpp.o"
-  "CMakeFiles/Ex2.dir/main.cc.o"
+  "CMakeFiles/Ex2.dir/UThread.cpp.o.d"
   "CMakeFiles/Ex2.dir/uthreads.cpp.o"
-  "Ex2.exe"
+  "CMakeFiles/Ex2.dir/uthreads.cpp.o.d"
+  "Ex2"
   "Ex2.pdb"
-  "libEx2.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

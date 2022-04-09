@@ -8,85 +8,87 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/cmake-build-debug"/>
+				<Option working_dir="/home/guy/Documents/OS/Ex1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/cmake-build-debug"/>
+				<Option working_dir="/home/guy/Documents/OS/Ex1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/guy/Documents/OS/Ex1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Ex1">
-				<Option output="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/cmake-build-debug/Ex1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/cmake-build-debug"/>
+				<Option output="/home/guy/Documents/OS/Ex1/cmake-build-debug/Ex1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/guy/Documents/OS/Ex1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ex1"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ex1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Ex1/fast">
-				<Option output="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/cmake-build-debug/Ex1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/cmake-build-debug"/>
+				<Option output="/home/guy/Documents/OS/Ex1/cmake-build-debug/Ex1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/guy/Documents/OS/Ex1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ex1/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana\ C/sem\ B/Operating\ Systems/Code/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ex1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/guy/Documents/OS/Ex1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/osm.cpp">
+		<Unit filename="/home/guy/Documents/OS/Ex1/osm.cpp">
 			<Option target="Ex1"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/osm.h">
+		<Unit filename="/home/guy/Documents/OS/Ex1/osm.h">
 			<Option target="Ex1"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex1/CMakeLists.txt">
+		<Unit filename="/home/guy/Documents/OS/Ex1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

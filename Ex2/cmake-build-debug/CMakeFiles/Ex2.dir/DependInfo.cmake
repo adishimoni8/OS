@@ -1,19 +1,18 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/Exception.cpp" "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/Exception.cpp.o"
-  "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/QuantumTimer.cpp" "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/QuantumTimer.cpp.o"
-  "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/UThread.cpp" "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/UThread.cpp.o"
-  "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/main.cc" "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/main.cc.o"
-  "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/uthreads.cpp" "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/uthreads.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/guy/Documents/OS/Ex2/Exception.cpp" "CMakeFiles/Ex2.dir/Exception.cpp.o" "gcc" "CMakeFiles/Ex2.dir/Exception.cpp.o.d"
+  "/home/guy/Documents/OS/Ex2/QuantumTimer.cpp" "CMakeFiles/Ex2.dir/QuantumTimer.cpp.o" "gcc" "CMakeFiles/Ex2.dir/QuantumTimer.cpp.o.d"
+  "/home/guy/Documents/OS/Ex2/Tests/test1.in.cpp" "CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o" "gcc" "CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o.d"
+  "/home/guy/Documents/OS/Ex2/UThread.cpp" "CMakeFiles/Ex2.dir/UThread.cpp.o" "gcc" "CMakeFiles/Ex2.dir/UThread.cpp.o.d"
+  "/home/guy/Documents/OS/Ex2/uthreads.cpp" "CMakeFiles/Ex2.dir/uthreads.cpp.o" "gcc" "CMakeFiles/Ex2.dir/uthreads.cpp.o.d"
   )
 
 # Targets to which this target links.

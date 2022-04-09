@@ -1,0 +1,4 @@
+# ninja log v5
+1	110	1649508241253296400	CMakeFiles/Ex3.dir/Atomic/atomicdemo.cpp.o	56d0292f12b14970
+1	76	1649513597597007600	build.ninja	4a5d534f70eb8666
+1	69	1649507065496266700	CMakeFiles/Ex3.dir/Barrier/barrierdemo.cpp.o	4724fcf12e32b45d

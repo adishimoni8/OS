@@ -1,7 +1,4 @@
-C:\Users\gopgo\.CLion2019.3\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2"
-CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
-  CMake 3.21 or higher is required.  You are running version 3.15.3
-
-
--- Configuring incomplete, errors occurred!
-See also "/cygdrive/c/Users/gopgo/Desktop/Guy/University/Shana C/sem B/Operating Systems/Code/OS/Ex2/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+/home/guy/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/guy/Documents/OS/Ex2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/guy/Documents/OS/Ex2/cmake-build-debug

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Ex1.dir/osm.cpp.o"
-  "Ex1.exe"
+  "CMakeFiles/Ex1.dir/osm.cpp.o.d"
+  "Ex1"
   "Ex1.pdb"
-  "libEx1.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
