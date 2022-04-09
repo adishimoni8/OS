@@ -40,8 +40,8 @@ JobHandle startMapReduceJob(const MapReduceClient& client,
                             int multiThreadLevel){
 
     JobContext job = { client, inputVec, outputVec, multiThreadLevel,
-                               UNDEFINED_STAGE, threads[multiThreadLevel],
-                               contexts[multiThreadLevel], barrier(multiThreadLevel)};
+                       UNDEFINED_STAGE, threads[multiThreadLevel],
+                       contexts[multiThreadLevel], barrier(multiThreadLevel)};
     initiate_threads(&job);
     std::atomic<int> atomic_counter(0);
     for (int i = 0; i < MT_LEVEL; ++i) {
@@ -68,10 +68,14 @@ static void* thread_entry(void* arg){
 };
 
 static void map_phase(ThreadContext* tc){
-//    int old_value = (*(tc->split_counter))++;
-//    while(old_value < (tc->inputVec).size()){
-//        tc->client.map(tc->inputVec[old_value].first, tc->inputVec[old_value].second, &(tc->IntermediateVec));
-//        old_value = (*(tc->split_counter))++;
-//    }
-//    std::sort(tc->inputVec.begin(), tc->inputVec.end());
+    int old_value = (*(tc->split_counter))++;
+    while(old_value < (tc->inputVec).size()){
+        tc->client.map(tc->inputVec[old_value].first, tc->inputVec[old_value].second, &(tc->IntermediateVec));
+        old_value = (*(tc->split_counter))++;
+    }
+    std::sort(tc->inputVec.begin(), tc->inputVec.end());
+}
+
+void main() {
+    std::cin << "hi";
 }
