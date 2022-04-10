@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o CMakeFiles/Ex2.dir/Exception.cpp.o CMakeFiles/Ex2.dir/QuantumTimer.cpp.o CMakeFiles/Ex2.dir/UThread.cpp.o CMakeFiles/Ex2.dir/uthreads.cpp.o -o Ex2 
+/usr/bin/c++ -g CMakeFiles/Ex2.dir/Tests/test8new.cpp.o CMakeFiles/Ex2.dir/Exception.cpp.o CMakeFiles/Ex2.dir/QuantumTimer.cpp.o CMakeFiles/Ex2.dir/UThread.cpp.o CMakeFiles/Ex2.dir/uthreads.cpp.o -o Ex2 
