@@ -417,3 +417,11 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/guy/Documents/OS/Ex3/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/guy/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/ninja/linux/ninja cmTC_c72f4 && [1/2] Building C object CMakeFiles/cmTC_c72f4.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c72f4
+
+
+

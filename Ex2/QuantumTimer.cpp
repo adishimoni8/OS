@@ -30,4 +30,6 @@ void QuantumTimer::inc_quantums(){
 
 QuantumTimer::QuantumTimer() = default;
 
+QuantumTimer::~QuantumTimer() = default;
+
 

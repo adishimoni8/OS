@@ -69,19 +69,19 @@ include CMakeFiles/Ex2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ex2.dir/flags.make
 
-CMakeFiles/Ex2.dir/Tests/test8new.cpp.o: CMakeFiles/Ex2.dir/flags.make
-CMakeFiles/Ex2.dir/Tests/test8new.cpp.o: ../Tests/test8new.cpp
-CMakeFiles/Ex2.dir/Tests/test8new.cpp.o: CMakeFiles/Ex2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/Documents/OS/Ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ex2.dir/Tests/test8new.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Ex2.dir/Tests/test8new.cpp.o -MF CMakeFiles/Ex2.dir/Tests/test8new.cpp.o.d -o CMakeFiles/Ex2.dir/Tests/test8new.cpp.o -c /home/guy/Documents/OS/Ex2/Tests/test8new.cpp
+CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o: CMakeFiles/Ex2.dir/flags.make
+CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o: ../Tests/test1.in.cpp
+CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o: CMakeFiles/Ex2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/Documents/OS/Ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o -MF CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o.d -o CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o -c /home/guy/Documents/OS/Ex2/Tests/test1.in.cpp
 
-CMakeFiles/Ex2.dir/Tests/test8new.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/Tests/test8new.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/Documents/OS/Ex2/Tests/test8new.cpp > CMakeFiles/Ex2.dir/Tests/test8new.cpp.i
+CMakeFiles/Ex2.dir/Tests/test1.in.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex2.dir/Tests/test1.in.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/Documents/OS/Ex2/Tests/test1.in.cpp > CMakeFiles/Ex2.dir/Tests/test1.in.cpp.i
 
-CMakeFiles/Ex2.dir/Tests/test8new.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/Tests/test8new.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/Documents/OS/Ex2/Tests/test8new.cpp -o CMakeFiles/Ex2.dir/Tests/test8new.cpp.s
+CMakeFiles/Ex2.dir/Tests/test1.in.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex2.dir/Tests/test1.in.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/Documents/OS/Ex2/Tests/test1.in.cpp -o CMakeFiles/Ex2.dir/Tests/test1.in.cpp.s
 
 CMakeFiles/Ex2.dir/Exception.cpp.o: CMakeFiles/Ex2.dir/flags.make
 CMakeFiles/Ex2.dir/Exception.cpp.o: ../Exception.cpp
@@ -141,7 +141,7 @@ CMakeFiles/Ex2.dir/uthreads.cpp.s: cmake_force
 
 # Object files for target Ex2
 Ex2_OBJECTS = \
-"CMakeFiles/Ex2.dir/Tests/test8new.cpp.o" \
+"CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o" \
 "CMakeFiles/Ex2.dir/Exception.cpp.o" \
 "CMakeFiles/Ex2.dir/QuantumTimer.cpp.o" \
 "CMakeFiles/Ex2.dir/UThread.cpp.o" \
@@ -150,7 +150,7 @@ Ex2_OBJECTS = \
 # External object files for target Ex2
 Ex2_EXTERNAL_OBJECTS =
 
-Ex2: CMakeFiles/Ex2.dir/Tests/test8new.cpp.o
+Ex2: CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o
 Ex2: CMakeFiles/Ex2.dir/Exception.cpp.o
 Ex2: CMakeFiles/Ex2.dir/QuantumTimer.cpp.o
 Ex2: CMakeFiles/Ex2.dir/UThread.cpp.o

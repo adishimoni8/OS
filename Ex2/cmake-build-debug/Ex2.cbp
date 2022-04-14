@@ -94,7 +94,7 @@
 		<Unit filename="/home/guy/Documents/OS/Ex2/QuantumTimer.h">
 			<Option target="Ex2"/>
 		</Unit>
-		<Unit filename="/home/guy/Documents/OS/Ex2/Tests/test8new.cpp">
+		<Unit filename="/home/guy/Documents/OS/Ex2/Tests/test1.in.cpp">
 			<Option target="Ex2"/>
 		</Unit>
 		<Unit filename="/home/guy/Documents/OS/Ex2/UThread.cpp">

@@ -1,0 +1,22 @@
+//
+// Created by Bengo on 6/5/2021.
+//
+
+#ifndef OS_EX3_ERRORHANDLER_H
+#define OS_EX3_ERRORHANDLER_H
+enum ERROR_TYPE
+{
+    MEMORY_ERROR = 1,
+    SEM_INIT_ERROR,
+    SEM_LOCK_UNLOCK_ERROR,
+    MUTEX_INIT_ERROR,
+    MUTEX_LOCK_UNLOCK_ERROR,
+    THREAD_JOIN_ERROR,
+    THREAD_CREATION_ERROR
+
+};
+
+void printError(ERROR_TYPE errorType);
+
+
+#endif //OS_EX3_ERRORHANDLER_H

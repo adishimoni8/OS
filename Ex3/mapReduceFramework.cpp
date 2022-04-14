@@ -1,91 +1,155 @@
 #include <pthread.h>
-#include <atomic>
 #include <algorithm>
-#include "Barrier.h"
 #include "mapReduceFramework.h"
 #include "MapReduceClient.h"
+#include "JobContext.h"
+#include "ThreadContext.h"
+#include "Exception.h"
+#include <unistd.h>
 
-// ================ Declarations of Data Structures ======
 
-class JobContext;
-class ThreadContext;
+// In this file we refer to job context as jc, and thread context as tc
 
-// ================ Data Structures ======================
+// ========Macros to deal with the atomic counter ========
 
-class ThreadContext{
-public:
-    int threadID{};
-    JobContext* job_context{};
-    std::atomic<int>* split_counter{};
-    std::vector<IntermediatePair> IntermediateVec;
-};
+#define GET_KEYS_TO_PROCESS(ATOMIC) (ATOMIC & 0x7fffffff)
+#define SET_KEYS_TO_PROCESS(ATOMIC, NUM) (ATOMIC & (~(0x7fffffff))) + NUM
+#define GET_ALREADY_PROCESSED(ATOMIC) (ATOMIC & (0x7fffffff))
+#define GET_STAGE(ATOMIC) ((uint64_t) ATOMIC >> 62))
+#define SET_STAGE(ATOMIC) ((uint64_t) ATOMIC << 62)
 
-class JobContext{
-public:
-    MapReduceClient& client;
-    InputVec& inputVec;
-    OutputVec& outputVec;
-    int multiThreadLevel;
-    JobState state;
-    pthread_t* threads;
-    ThreadContext* thread_contexts;
-    Barrier* barrier;
-    JobContext(MapReduceClient& client, InputVec& inputVec, OutputVec& outputVec, int multiThreadLevel, JobState state,
-               pthread_t* threads, ThreadContext* thread_contexts, Barrier* barrier):client(client), inputVec(inputVec),
-               outputVec(outputVec), multiThreadLevel(multiThreadLevel), state(state), threads(threads),
-               thread_contexts(thread_contexts), barrier(barrier){};
-};
-
-// =================== Declarations of helpers ============
-static void map_phase(ThreadContext* tc);
+// =================== Declarations of helpers ===========
+static void* map_phase(void*);
+static void* shuffle_phase(void*);
+static void* reduce_phase(void*);
 static void initiate_threads(JobContext*);
-static void* thread_entry(void* arg);
+static void* thread_entry(void*);
+static K2* find_maximum_key(JobContext*);
+static IntermediateVec make_specific_key_vec(JobContext*, K2*);
+bool compareIntermediatePair(IntermediatePair, IntermediatePair);
 // =================== API ================================
 
 JobHandle startMapReduceJob(const MapReduceClient& client,
                             const InputVec& inputVec, OutputVec& outputVec,
                             int multiThreadLevel){
-    pthread_t threads[multiThreadLevel];
-    ThreadContext contexts[multiThreadLevel];
-    Barrier barrier(multiThreadLevel);
-    JobContext job = new JobContext(client, inputVec, outputVec, multiThreadLevel,
-                      UNDEFINED_STAGE, &threads,
-                      &contexts, &barrier);
-    initiate_threads(&job);
-    std::atomic<int> atomic_counter(0);
-    for (int i = 0; i < multiThreadLevel; ++i) {
-        pthread_join(threads[i], nullptr);
+    // Create the job:
+    auto *jc = new(std::nothrow) JobContext(client, inputVec, outputVec, multiThreadLevel);
+    if (!jc) {
+        print_error_and_exit(MEM_ERROR);
     }
-    return static_cast<JobHandle> (job);
+    jc->atomic_var = ((uint64_t)MAP_STAGE << 62);
+    initiate_threads(jc);
+    return static_cast<JobHandle> (jc);
+}
+
+void emit2(K2 *key, V2 *value, void *context) {
+    auto *tc =  static_cast<ThreadContext *> (context);
+    IntermediatePair pair = IntermediatePair(key, value);
+    tc->intermediate_vec.push_back(pair);
 }
 
 // =================== Utils ============================
 
-static void initiate_threads(JobContext* job){
-    for (int i = 0; i < job->multiThreadLevel; ++i) {
-        job->thread_contexts[i] = {i, job};
-    }
-    for (int i = 0; i < job->multiThreadLevel; ++i) {
-        pthread_create(&(job->threads[i]), nullptr, thread_entry, &(job->thread_contexts[i]));
-    }
-}
-
-static void* thread_entry(void* arg){
-    auto* tc = (ThreadContext*) arg;
+static void* thread_entry(void* context){
+    auto *tc = static_cast<ThreadContext *> (context);
+    auto *jc = tc->job_context;
     map_phase(tc);
     tc->job_context->barrier->barrier();
-};
-
-static void map_phase(ThreadContext* tc){
-    JobContext* job_context = tc->job_context;
-    int old_value = (*(tc->split_counter))++;
-    while(old_value < (job_context->inputVec).size()){
-        job_context->client.map(job_context->inputVec[old_value].first, job_context->inputVec[old_value].second, &(tc->IntermediateVec));
-        old_value = (*(tc->split_counter))++;
+    if (tc->thread_id == 0) {
+        jc->atomic_var = ((uint64_t)SHUFFLE_STAGE << 62);
+        shuffle_phase(tc);
+        for (int i = 0; i < jc->multi_thread_level; ++i) {
+            if (sem_post(&jc->shuffle_sem)) {
+                exit(1);
+            }
+        }
+    } else {
+        if (sem_wait(&jc->shuffle_sem)) {
+            exit(1);
+        }
     }
-    std::sort(job_context->inputVec.begin(), job_context->inputVec.end());
+    //reduce_phase(context);
+    return nullptr;
 }
 
-int main() {
-    std::cin << "hi";
+static void initiate_threads(JobContext* jc){
+    int num_of_threads = jc->multi_thread_level;
+    for (int i = 0; i < num_of_threads; ++i) {
+        jc->contexts[i] = ThreadContext(i, jc);
+    }
+    for (int i = 0; i < num_of_threads; ++i) {
+        if (pthread_create(&(jc->threads[i]), nullptr, thread_entry, &(jc->contexts[i]))){
+            print_error_and_exit(PTHREAD_LIB_ERROR);
+        }
+    }
 }
+
+static void *map_phase(void* context) {
+    auto *tc = static_cast<ThreadContext *> (context);
+    JobContext *jc = tc->job_context;
+    int num_of_elements = (int) jc->input_vec.size();
+    int old_value = GET_ALREADY_PROCESSED(jc->atomic_var++);
+    while (old_value < num_of_elements) {
+        jc->client.map(jc->input_vec[old_value].first, jc->input_vec[old_value].second, tc);
+        old_value = GET_ALREADY_PROCESSED(jc->atomic_var++);
+    }
+    std::sort(tc->intermediate_vec.begin(), tc->intermediate_vec.end(), compareIntermediatePair);
+    return nullptr;
+}
+
+bool compareIntermediatePair(IntermediatePair x, IntermediatePair y) {
+    return ((*x.first) < (*y.first));
+}
+
+static void* shuffle_phase(void *context){
+    auto *tc = static_cast<ThreadContext *> (context);
+    JobContext *jc = tc->job_context;
+    K2* maximum_key = find_maximum_key(jc);
+    while (maximum_key != nullptr){
+        IntermediateVec specific_key_vec = make_specific_key_vec(jc, maximum_key);
+        jc->shuffle_vec.push_back(specific_key_vec);
+        jc->atomic_var += (specific_key_vec.size() << 31);
+        maximum_key = find_maximum_key(jc);
+    }
+    for (auto & i : jc->shuffle_vec){
+        for (auto & j : i){
+            std::cout << j.first << " " << j.second << "!" << std::endl;
+        }
+    }
+    return nullptr;
+}
+
+static K2* find_maximum_key(JobContext* jc){
+    K2* maximum_key = nullptr;
+    for (int i = 0; i < jc->multi_thread_level; ++i) {
+        if (jc->contexts[i].intermediate_vec.empty()) {
+            continue;
+        }
+        if ((maximum_key == nullptr) || (*maximum_key) < (*(jc->contexts[i].intermediate_vec.front().first))) {
+            maximum_key = jc->contexts[i].intermediate_vec.front().first;
+        }
+    }
+    return maximum_key;
+}
+
+static IntermediateVec make_specific_key_vec(JobContext* jc, K2* maximum_key){
+    IntermediateVec specific_key_vec;
+    for (int i = 0; i < jc->multi_thread_level; ++i) {
+        while ((!jc->contexts[i].intermediate_vec.empty())) {
+            if (!(((*maximum_key) < (*(jc->contexts[i].intermediate_vec.front().first))) & // If keys are equal
+                    (*(jc->contexts[i].intermediate_vec.front().first)) < (*maximum_key))) {
+                specific_key_vec.push_back(jc->contexts[i].intermediate_vec.front());
+                jc->contexts[i].intermediate_vec.erase(jc->contexts[i].intermediate_vec.begin());
+            }
+        }
+    }
+    return specific_key_vec;
+}
+
+//static void *reduce_phase(void* context) {
+//    auto *tc = static_cast<ThreadContext *> (context);
+//    JobContext *jc = tc->job_context;
+//    return nullptr;
+//}
+
+

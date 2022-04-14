@@ -43,6 +43,8 @@ class QuantumTimer {
    */
   void inc_quantums();
 
+  virtual ~QuantumTimer();
+
  private:
   struct itimerval _timer; //internal timer.
   int _quantums; //amount of quantums.

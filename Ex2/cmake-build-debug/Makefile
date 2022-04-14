@@ -177,29 +177,29 @@ QuantumTimer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/QuantumTimer.cpp.s
 .PHONY : QuantumTimer.cpp.s
 
-Tests/test8new.o: Tests/test8new.cpp.o
-.PHONY : Tests/test8new.o
+Tests/test1.in.o: Tests/test1.in.cpp.o
+.PHONY : Tests/test1.in.o
 
 # target to build an object file
-Tests/test8new.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Tests/test8new.cpp.o
-.PHONY : Tests/test8new.cpp.o
+Tests/test1.in.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o
+.PHONY : Tests/test1.in.cpp.o
 
-Tests/test8new.i: Tests/test8new.cpp.i
-.PHONY : Tests/test8new.i
+Tests/test1.in.i: Tests/test1.in.cpp.i
+.PHONY : Tests/test1.in.i
 
 # target to preprocess a source file
-Tests/test8new.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Tests/test8new.cpp.i
-.PHONY : Tests/test8new.cpp.i
+Tests/test1.in.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Tests/test1.in.cpp.i
+.PHONY : Tests/test1.in.cpp.i
 
-Tests/test8new.s: Tests/test8new.cpp.s
-.PHONY : Tests/test8new.s
+Tests/test1.in.s: Tests/test1.in.cpp.s
+.PHONY : Tests/test1.in.s
 
 # target to generate assembly for a file
-Tests/test8new.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Tests/test8new.cpp.s
-.PHONY : Tests/test8new.cpp.s
+Tests/test1.in.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex2.dir/build.make CMakeFiles/Ex2.dir/Tests/test1.in.cpp.s
+.PHONY : Tests/test1.in.cpp.s
 
 UThread.o: UThread.cpp.o
 .PHONY : UThread.o
@@ -264,9 +264,9 @@ help:
 	@echo "... QuantumTimer.o"
 	@echo "... QuantumTimer.i"
 	@echo "... QuantumTimer.s"
-	@echo "... Tests/test8new.o"
-	@echo "... Tests/test8new.i"
-	@echo "... Tests/test8new.s"
+	@echo "... Tests/test1.in.o"
+	@echo "... Tests/test1.in.i"
+	@echo "... Tests/test1.in.s"
 	@echo "... UThread.o"
 	@echo "... UThread.i"
 	@echo "... UThread.s"

@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/guy/Documents/OS/Ex2/Exception.cpp" "CMakeFiles/Ex2.dir/Exception.cpp.o" "gcc" "CMakeFiles/Ex2.dir/Exception.cpp.o.d"
   "/home/guy/Documents/OS/Ex2/QuantumTimer.cpp" "CMakeFiles/Ex2.dir/QuantumTimer.cpp.o" "gcc" "CMakeFiles/Ex2.dir/QuantumTimer.cpp.o.d"
-  "/home/guy/Documents/OS/Ex2/Tests/test8new.cpp" "CMakeFiles/Ex2.dir/Tests/test8new.cpp.o" "gcc" "CMakeFiles/Ex2.dir/Tests/test8new.cpp.o.d"
+  "/home/guy/Documents/OS/Ex2/Tests/test1.in.cpp" "CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o" "gcc" "CMakeFiles/Ex2.dir/Tests/test1.in.cpp.o.d"
   "/home/guy/Documents/OS/Ex2/UThread.cpp" "CMakeFiles/Ex2.dir/UThread.cpp.o" "gcc" "CMakeFiles/Ex2.dir/UThread.cpp.o.d"
   "/home/guy/Documents/OS/Ex2/uthreads.cpp" "CMakeFiles/Ex2.dir/uthreads.cpp.o" "gcc" "CMakeFiles/Ex2.dir/uthreads.cpp.o.d"
   )
