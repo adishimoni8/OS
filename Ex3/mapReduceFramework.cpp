@@ -42,6 +42,12 @@ JobHandle startMapReduceJob(const MapReduceClient& client,
     return static_cast<JobHandle> (jc);
 }
 
+/**
+ * Recieves a given pair and adds them to the framework databases.
+ * @param key Key of given pair.
+ * @param value Value of given pair.
+ * @param context context
+ */
 void emit2(K2 *key, V2 *value, void *context) {
     auto *tc =  static_cast<ThreadContext *> (context);
     IntermediatePair pair = IntermediatePair(key, value);
@@ -50,6 +56,11 @@ void emit2(K2 *key, V2 *value, void *context) {
 
 // =================== Utils ============================
 
+/**
+ * The process each thread performs during the runtime of the program.
+ * @param context Context of job.
+ * @return //todo change.
+ */
 static void* thread_entry(void* context){
     auto *tc = static_cast<ThreadContext *> (context);
     auto *jc = tc->job_context;
@@ -72,9 +83,13 @@ static void* thread_entry(void* context){
     return nullptr;
 }
 
+/**
+ * Creates new threads, according to orders found in the job context.
+ * @param jc job context to receive orders from and update the new threads into.
+ */
 static void initiate_threads(JobContext* jc){
     int num_of_threads = jc->multi_thread_level;
-    for (int i = 0; i < num_of_threads; ++i) {
+    for (int i = 0; i < num_of_threads; ++i) { //saves the context of each thread.
         jc->contexts[i] = ThreadContext(i, jc);
     }
     for (int i = 0; i < num_of_threads; ++i) {
@@ -84,6 +99,11 @@ static void initiate_threads(JobContext* jc){
     }
 }
 
+/**
+ * Performs the map phase of the program, ran by the threads individually.
+ * @param context Context of a thread.
+ * @return //todo change.
+ */
 static void *map_phase(void* context) {
     auto *tc = static_cast<ThreadContext *> (context);
     JobContext *jc = tc->job_context;
@@ -97,10 +117,21 @@ static void *map_phase(void* context) {
     return nullptr;
 }
 
-bool compareIntermediatePair(IntermediatePair x, IntermediatePair y) {
-    return ((*x.first) < (*y.first));
+/**
+ * Compares between 2 pairs, used to sort the vectors.
+ * @param first_pair first pair.
+ * @param second_pair second pair.
+ * @return
+ */
+bool compareIntermediatePair(IntermediatePair first_pair, IntermediatePair second_pair) {
+    return ((*first_pair.first) < (*second_pair.first));
 }
 
+/**
+ * Performs the shuffle phase.
+ * @param context Context of a thread.
+ * @return //todo change.
+ */
 static void* shuffle_phase(void *context){
     auto *tc = static_cast<ThreadContext *> (context);
     JobContext *jc = tc->job_context;
@@ -119,6 +150,11 @@ static void* shuffle_phase(void *context){
     return nullptr;
 }
 
+/**
+ * Finds maximum key.
+ * @param jc job context.
+ * @return
+ */
 static K2* find_maximum_key(JobContext* jc){
     K2* maximum_key = nullptr;
     for (int i = 0; i < jc->multi_thread_level; ++i) {
@@ -132,6 +168,12 @@ static K2* find_maximum_key(JobContext* jc){
     return maximum_key;
 }
 
+/**
+ * Creates a vector for every intermediate type key.
+ * @param jc job context.
+ * @param maximum_key the maximum key
+ * @return A vector containing all pairs relevant to specific key.
+ */
 static IntermediateVec make_specific_key_vec(JobContext* jc, K2* maximum_key){
     IntermediateVec specific_key_vec;
     for (int i = 0; i < jc->multi_thread_level; ++i) {
