@@ -6,7 +6,7 @@
 
 class Barrier {
 public:
-	Barrier(int numThreads);
+	explicit Barrier(int numThreads);
 	~Barrier();
 	void barrier();
 

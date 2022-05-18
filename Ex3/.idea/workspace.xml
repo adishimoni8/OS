@@ -1,69 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="Ex3" targetName="Ex3" />
-    </generated>
+    <generated />
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfdbc849-f8e2-4d82-8840-856c7ec64a0e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex1/osm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex1/osm.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/.idea/Ex2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/.idea/Ex2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/.idea/dictionaries/Adish.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/.idea/dictionaries/Adish.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/.idea/dictionaries/gopgo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/.idea/dictionaries/gopgo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/EnvHelpers.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/EnvHelpers.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/Exception.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/Exception.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/Exception.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/Exception.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/QuantumTimer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/QuantumTimer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/QuantumTimer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/QuantumTimer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/README" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/UThread.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/UThread.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/UThread.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/UThread.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/compiler_depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/compiler_depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/compiler_depend.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Ex2.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/uthreads.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/uthreads.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex2/uthreads.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/uthreads.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atomic/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atomic/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atomic/atomicdemo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atomic/atomicdemo_multivar.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Barrier.h" beforeDir="false" afterPath="$PROJECT_DIR$/Barrier.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Barrier/Barrier.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Barrier/Barrier.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Barrier/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Barrier/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Barrier/barrierdemo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exception.h" beforeDir="false" afterPath="$PROJECT_DIR$/Exception.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobContext.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/JobContext.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobContext.h" beforeDir="false" afterPath="$PROJECT_DIR$/JobContext.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapReduceFramework.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MapReduceFramework.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sample Client/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sample Client/MapReduceClient.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sample Client/MapReduceFramework.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SampleClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SampleClient.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreadContext.h" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadContext.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-5f04679cc7c83a755bd9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-1c67285284bca41f5702.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5a57aea80cbecfb2a269.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-04-14T19-21-21-0646.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Ex3-Debug-44ceba11fa9a547c6d5d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-ee5ca47e57a615ee224c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/Atomic/atomicdemo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/Barrier.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/Barrier/barrierdemo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/ContextClasses1.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/JobContext.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/SampleClient.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/ThreadContext.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ex3.dir/mapReduceFramework.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Ex3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapReduceFramework.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mapReduceFramework.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mattanTests/SampleClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mattanTests/SampleClient.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/.idea/benyssss.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/Barrier.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/Barrier.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/ContextClasses.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/ContextClasses.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/ErrorHandler.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/ErrorHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/MapReduceClient.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/MapReduceFramework.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/MapReduceFramework.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/SampleClient.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/reply/cache-v2-2709da63d53a404856bf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-339866a4cc8ada5ad88e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-719fd3b7f9cd2558a2c0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/reply/index-2022-04-14T18-26-25-0956.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/reply/target-benyssss-Debug-ca823a049b3fe63a4fe3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-ee5ca47e57a615ee224c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/benyssss.dir/Barrier.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/benyssss.dir/ContextClasses.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/benyssss.dir/ErrorHandler.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/benyssss.dir/MapReduceFramework.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/benyssss.dir/SampleClient.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/benyssss.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/benyssss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../benyssss/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +142,13 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -107,30 +182,72 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Zohar's" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Zohar's" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/google_tests" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Ex3" TARGET_NAME="Ex3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ex3" RUN_TARGET_NAME="Ex3">
+  <component name="RunManager" selected="Google Test.MattanTests.waitAndCloseTest">
+    <configuration name="MattanTests.deadlockTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mattanTester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="mattanTester" TEST_CLASS="MattanTests" TEST_METHOD="deadlockTest" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MattanTests.outputTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mattanTester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="mattanTester" TEST_CLASS="MattanTests" TEST_METHOD="outputTest" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MattanTests.progressTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mattanTester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="mattanTester" TEST_CLASS="MattanTests" TEST_METHOD="progressTest" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MattanTests.randomTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mattanTester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="mattanTester" TEST_CLASS="MattanTests" TEST_METHOD="randomTest" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MattanTests.waitAndCloseTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mattanTester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="mattanTester" TEST_CLASS="MattanTests" TEST_METHOD="waitAndCloseTest" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Google Test.MattanTests.deadlockTest" />
+      <item itemvalue="Google Test.MattanTests.outputTest" />
+      <item itemvalue="Google Test.MattanTests.progressTest" />
+      <item itemvalue="Google Test.MattanTests.randomTest" />
+      <item itemvalue="Google Test.MattanTests.waitAndCloseTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.MattanTests.waitAndCloseTest" />
+        <item itemvalue="Google Test.MattanTests.progressTest" />
+        <item itemvalue="Google Test.MattanTests.randomTest" />
+        <item itemvalue="Google Test.MattanTests.outputTest" />
+        <item itemvalue="Google Test.MattanTests.deadlockTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\gopgo\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cfdbc849-f8e2-4d82-8840-856c7ec64a0e" name="Changes" comment="" />
@@ -149,6 +266,43 @@
       <workItem from="1649961545579" duration="1125000" />
       <workItem from="1649962733650" duration="315000" />
       <workItem from="1649963108286" duration="11684000" />
+      <workItem from="1650137678755" duration="78000" />
+      <workItem from="1650141019386" duration="1423000" />
+      <workItem from="1650144172506" duration="2000" />
+      <workItem from="1650144324423" duration="53000" />
+      <workItem from="1650144401292" duration="52000" />
+      <workItem from="1650188319859" duration="9048000" />
+      <workItem from="1650203500595" duration="43000" />
+      <workItem from="1650276373015" duration="17460000" />
+      <workItem from="1650445747885" duration="5851000" />
+      <workItem from="1650460101727" duration="9000" />
+      <workItem from="1650522271853" duration="16794000" />
+      <workItem from="1650550390932" duration="1466000" />
+      <workItem from="1650552091293" duration="226000" />
+      <workItem from="1650552339770" duration="3633000" />
+      <workItem from="1650737592904" duration="2000" />
+      <workItem from="1650802091088" duration="3318000" />
+      <workItem from="1650820308639" duration="3000" />
+      <workItem from="1650824958274" duration="1670000" />
+      <workItem from="1650827237335" duration="5000" />
+      <workItem from="1650988091244" duration="8059000" />
+      <workItem from="1651001708444" duration="787000" />
+      <workItem from="1651059683018" duration="3000" />
+      <workItem from="1651059825813" duration="49000" />
+      <workItem from="1651059950193" duration="430000" />
+      <workItem from="1651060733014" duration="151000" />
+      <workItem from="1651133921079" duration="462000" />
+      <workItem from="1651134643584" duration="1895000" />
+      <workItem from="1651136752942" duration="1204000" />
+      <workItem from="1651150778294" duration="51000" />
+      <workItem from="1651668021888" duration="396000" />
+      <workItem from="1651668630750" duration="2183000" />
+      <workItem from="1651950110902" duration="19000" />
+      <workItem from="1651996544825" duration="76000" />
+      <workItem from="1651996732372" duration="2955000" />
+      <workItem from="1652278769891" duration="158000" />
+      <workItem from="1652285714722" duration="995000" />
+      <workItem from="1652607097913" duration="29000" />
     </task>
     <servers />
   </component>
@@ -167,24 +321,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/mapReduceFramework.cpp</url>
-          <line>114</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/mapReduceFramework.cpp</url>
-          <line>108</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/mapReduceFramework.cpp</url>
-          <line>106</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="jc-&gt;contexts-&gt;intermediate_vec" />
+        <watch expression="jc-&gt;contexts[1]-&gt;intermediate_vec" language="ObjectiveC" />
+        <watch expression="it" language="ObjectiveC" />
+        <watch expression="jc-&gt;shuffle_vec" language="ObjectiveC" />
+        <watch expression="maximum_key-&gt;c" />
+        <watch expression="pair.first-&gt;c" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

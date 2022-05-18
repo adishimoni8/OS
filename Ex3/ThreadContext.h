@@ -1,6 +1,7 @@
 #ifndef EX3_THREADCONTEXT_H
 #define EX3_THREADCONTEXT_H
 #include "JobContext.h"
+#include "MapReduceClient.h"
 
 class JobContext;
 

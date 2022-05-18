@@ -1,0 +1,14 @@
+# Target labels
+ googletest
+# Source files and their labels
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/CMakeFiles/googletest
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/CMakeFiles/googletest.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/CMakeFiles/googletest-complete.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule
+/home/guy/Documents/OS/Ex3/cmake-build-debug/mattanTests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule

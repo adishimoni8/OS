@@ -36,13 +36,18 @@ public:
     const InputVec &input_vec; // Input vector consisting of elements given by user.
     OutputVec &output_vec;// Vector for output data.
     int multi_thread_level; // Amount of threads to run during the process.
-    ThreadContext* contexts; // Vector consisting of thread's contexts.
+    ThreadContext* contexts; // Vector consisting of all thread's contexts.
     pthread_t *threads; // Vector of threads.
-    std::atomic<uint64_t> atomic_var; // 2 bits stage - 31 bits keys to process - 31 bits already processed.
     Barrier *barrier; // A barrier object, manipulates and controls the threads at required times.
-    sem_t shuffle_sem; // A semaphore used for the shuffling phase.
     std::vector<std::vector<IntermediatePair>> shuffle_vec; // vector of shuffled elements.
 
+    std::atomic<uint64_t> atomic_var; // 2 bits stage - 31 bits keys to process - 31 bits already processed.
+    std::atomic<int> atomic_already_processed_counter;
+    std::atomic<bool> is_joined;
+    std::atomic<bool> is_finished;
+
+    sem_t shuffle_sem; // A semaphore used for the shuffling phase.
+    pthread_mutex_t output_vec_lock;
 };
 
 
